@@ -1,7 +1,6 @@
 package net.chairmanfed.neotestmod.data;
 
 import net.chairmanfed.neotestmod.NeoTestMod;
-import net.chairmanfed.neotestmod.data.ModBlockStateProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;

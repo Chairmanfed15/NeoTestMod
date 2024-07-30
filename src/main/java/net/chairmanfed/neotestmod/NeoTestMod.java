@@ -2,6 +2,7 @@ package net.chairmanfed.neotestmod;
 
 import com.mojang.logging.LogUtils;
 import net.chairmanfed.neotestmod.block.ModBlock;
+import net.chairmanfed.neotestmod.item.ModCreativeModeTab;
 import net.chairmanfed.neotestmod.item.ModItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -22,6 +23,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -50,13 +52,11 @@ public class NeoTestMod
         // Register the Deferred Register to the mod event bus so items get registered
         ModItem.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
-
+        ModCreativeModeTab.CREATIVE_TABS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
