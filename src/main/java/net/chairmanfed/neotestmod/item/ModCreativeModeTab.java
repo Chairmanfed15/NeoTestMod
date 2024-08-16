@@ -19,6 +19,8 @@ public class ModCreativeModeTab {
             "mod_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + NeoTestMod.MODID + ".mod_tab"))
                     .icon(()-> new ItemStack(ModBlock.NOXUM.get()))
-                    .build()
+                    .displayItems((params, output) -> {
+                        output.accept(ModBlock.NOXUM.get());
+                    }).build()
     );
 }

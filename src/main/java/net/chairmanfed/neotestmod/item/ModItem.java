@@ -11,8 +11,8 @@ import java.util.function.Supplier;
 
 public class ModItem {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.createItems(NeoTestMod.MODID);
-    public static final Supplier<Item> NOXUM = registerBlockItem("noxum", ModBlock.NOXUM);
     public static Supplier<Item> registerBlockItem(String name, Supplier<Block> block) {
         return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
+    public static final Supplier<Item> NOXUM = registerBlockItem("noxum", ModBlock.NOXUM);
 }
