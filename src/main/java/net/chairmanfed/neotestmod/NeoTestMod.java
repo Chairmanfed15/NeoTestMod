@@ -6,12 +6,8 @@ import net.chairmanfed.neotestmod.item.ModCreativeModeTab;
 import net.chairmanfed.neotestmod.item.ModItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -25,10 +21,9 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
+
+import java.util.Locale;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(NeoTestMod.MODID)
@@ -36,6 +31,9 @@ public class NeoTestMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "neotestmod";
+    public static ResourceLocation prefix(String name) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, name.toLowerCase(Locale.ROOT));
+    }
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -64,6 +62,15 @@ public class NeoTestMod
     public void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlock.NOXUM.get());
+            event.accept(ModBlock.NOXUM_STAIRS.get());
+            event.accept(ModBlock.NOXUM_SLAB.get());
+            event.accept(ModBlock.NOXUM_WALL.get());
+            // event.accept(ModBlock.NOXUM_PRESSURE_PLATE.get());
+            // event.accept(ModBlock.NOXUM_BUTTON.get());
+            event.accept(ModBlock.POLISHED_NOXUM.get());
+            event.accept(ModBlock.POLISHED_NOXUM_STAIRS.get());
+            event.accept(ModBlock.POLISHED_NOXUM_SLAB.get());
+            event.accept(ModBlock.POLISHED_NOXUM_WALL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlock.NOXUM.get());

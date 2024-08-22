@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "neotestmod:block/noxum",
+    "side": "neotestmod:block/noxum",
+    "top": "neotestmod:block/noxum"
+  }
+}

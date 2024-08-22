@@ -5,7 +5,6 @@ import net.chairmanfed.neotestmod.block.ModBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -21,6 +20,16 @@ public class ModCreativeModeTab {
                     .icon(()-> new ItemStack(ModBlock.NOXUM.get()))
                     .displayItems((params, output) -> {
                         output.accept(ModBlock.NOXUM.get());
+                        output.accept(ModBlock.NOXUM_STAIRS.get());
+                        output.accept(ModBlock.NOXUM_SLAB.get());
+                        output.accept(ModBlock.NOXUM_WALL.get());
+                        // output.accept(ModBlock.NOXUM_PRESSURE_PLATE.get());
+                        // output.accept(ModBlock.NOXUM_BUTTON.get());
+
+                        output.accept(ModBlock.POLISHED_NOXUM.get());
+                        output.accept(ModBlock.POLISHED_NOXUM_STAIRS);
+                        output.accept(ModBlock.POLISHED_NOXUM_SLAB.get());
+                        output.accept(ModBlock.POLISHED_NOXUM_WALL.get());
                     }).build()
     );
 }

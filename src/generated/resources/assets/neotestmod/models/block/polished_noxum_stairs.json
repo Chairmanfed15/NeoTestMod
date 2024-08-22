@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "neotestmod:block/polished_noxum",
+    "side": "neotestmod:block/polished_noxum",
+    "top": "neotestmod:block/polished_noxum"
+  }
+}

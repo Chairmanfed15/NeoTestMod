@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "neotestmod:block/noxum_slab"
+    },
+    "type=double": {
+      "model": "neotestmod:block/noxum"
+    },
+    "type=top": {
+      "model": "neotestmod:block/noxum_slab_top"
+    }
+  }
+}

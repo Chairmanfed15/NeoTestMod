@@ -2,11 +2,9 @@
   "values": [
     "neotestmod:noxum",
     "neotestmod:noxum_stairs",
-    "neotestmod:noxum_slab",
     "neotestmod:noxum_wall",
     "neotestmod:polished_noxum",
     "neotestmod:polished_noxum_stairs",
-    "neotestmod:polished_noxum_slab",
     "neotestmod:polished_noxum_wall"
   ]
 }
