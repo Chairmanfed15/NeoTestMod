@@ -2,11 +2,9 @@
   "values": [
     "noxerna:noxum",
     "noxerna:noxum_stairs",
-    "noxerna:noxum_slab",
     "noxerna:noxum_wall",
     "noxerna:polished_noxum",
     "noxerna:polished_noxum_stairs",
-    "noxerna:polished_noxum_slab",
     "noxerna:polished_noxum_wall"
   ]
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "neotestmod:block/noxum",
-    "side": "neotestmod:block/noxum",
-    "top": "neotestmod:block/noxum"
-  }
-}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/noxum_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/noxum"
+    },
+    "type=top": {
+      "model": "noxerna:block/noxum_slab_top"
+    }
+  }
+}
