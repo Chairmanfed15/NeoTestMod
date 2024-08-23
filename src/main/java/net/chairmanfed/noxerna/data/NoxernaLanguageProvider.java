@@ -1,7 +1,7 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.block.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.LanguageProvider;
@@ -13,9 +13,15 @@ public class NoxernaLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add("itemGroup." + TheNoxerna.MODID + ".mod_tab", "The Noxerna");
+        add("itemGroup." + TheNoxerna.MODID + ".building_blocks", "Noxerna Building Blocks");
+        add("gamerule.maxQuakeMagnitude", "Maximum Quake Magnitude");
 
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
+        addBlock(NoxernaBlocks.NOXUM_BRICKS, "Noxum Bricks");
+        addBlock(NoxernaBlocks.NOXUM_BRICK_STAIRS, "Noxum Brick Stairs");
+        addBlock(NoxernaBlocks.NOXUM_BRICK_SLAB, "Noxum Brick Slab");
+        addBlock(NoxernaBlocks.NOXUM_BRICK_WALL, "Noxum Brick Wall");
+        addBlock(NoxernaBlocks.NOXUM_PRESSURE_PLATE, "Noxum Pressure Plate");
         addBlock(NoxernaBlocks.NOXUM_STAIRS, "Noxum Stairs");
         addBlock(NoxernaBlocks.NOXUM_SLAB, "Noxum Slab");
         addBlock(NoxernaBlocks.NOXUM_WALL, "Noxum Wall");

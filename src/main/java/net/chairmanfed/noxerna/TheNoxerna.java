@@ -1,13 +1,14 @@
 package net.chairmanfed.noxerna;
 
 import com.mojang.logging.LogUtils;
-import net.chairmanfed.noxerna.block.NoxernaBlocks;
-import net.chairmanfed.noxerna.item.NoxernaCreativeModeTabs;
-import net.chairmanfed.noxerna.item.NoxernaItems;
+import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaCreativeModeTabs;
+import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -25,37 +26,27 @@ import org.slf4j.Logger;
 
 import java.util.Locale;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(TheNoxerna.MODID)
 public class TheNoxerna
 {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "noxerna";
     public static ResourceLocation prefix(String name) {
         return ResourceLocation.fromNamespaceAndPath(MODID, name.toLowerCase(Locale.ROOT));
     }
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
+    public static final GameRules.Key<GameRules.IntegerValue> RULE_MAX_QUAKE_MAGNITUDE =
+            GameRules.register(
+                    "maxQuakeMagnitude", GameRules.Category.UPDATES, GameRules.IntegerValue.create(10));
+
     public TheNoxerna(IEventBus modEventBus, ModContainer modContainer)
     {
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        // Register the Deferred Register to the mod event bus so blocks get registered
         NoxernaBlocks.BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         NoxernaItems.ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         modEventBus.addListener(this::buildContents);
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -65,15 +56,22 @@ public class TheNoxerna
             event.accept(NoxernaBlocks.NOXUM_STAIRS.get());
             event.accept(NoxernaBlocks.NOXUM_SLAB.get());
             event.accept(NoxernaBlocks.NOXUM_WALL.get());
-            // event.accept(ModBlock.NOXUM_PRESSURE_PLATE.get());
-            // event.accept(ModBlock.NOXUM_BUTTON.get());
+            event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+            // event.accept(NoxernaBlocks.NOXUM_BUTTON.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM_SLAB.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
+            event.accept(NoxernaBlocks.NOXUM_BRICKS.get());
+            event.accept(NoxernaBlocks.NOXUM_BRICK_STAIRS.get());
+            event.accept(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
+            event.accept(NoxernaBlocks.NOXUM_BRICK_WALL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(NoxernaBlocks.NOXUM.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+            event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
         }
     }
 
@@ -90,9 +88,6 @@ public class TheNoxerna
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {

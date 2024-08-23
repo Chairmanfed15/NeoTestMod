@@ -1,0 +1,29 @@
+package net.chairmanfed.noxerna.registry;
+
+import net.chairmanfed.noxerna.TheNoxerna;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+
+public class NoxernaTags {
+    public static class ItemTags {
+        public static TagKey<Item> localTag(String tagName) {
+            return net.minecraft.tags.ItemTags.create(TheNoxerna.prefix(tagName));
+        }
+        public static TagKey<Item> commonTag(String tagName) {
+            return net.minecraft.tags.ItemTags.create(TheNoxerna.prefix(tagName));
+        }
+        public static final TagKey<Item> COMPLETES_MINE_HARD_STONE_ADVANCEMENT = localTag(
+                "completes_mine_hard_stone_advancement");
+        public static final TagKey<Item> NOXUM_STONE_TYPE = localTag("stone_types/noxum");
+    }
+    public static class BlockTags {
+        public static TagKey<Block> localTag(String tagName) {
+            return net.minecraft.tags.BlockTags.create(TheNoxerna.prefix(tagName));
+        }
+        public static TagKey<Block> commonTag(String tagName) {
+            return net.minecraft.tags.BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", tagName));
+        }
+    }
+}

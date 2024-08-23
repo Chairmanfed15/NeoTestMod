@@ -4,6 +4,7 @@ import net.chairmanfed.noxerna.TheNoxerna;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.ItemTagsProvider;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
@@ -21,16 +22,21 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        // Content that only the client cares about
+        // Content that only the client should care about, so anything that goes in /assets
         boolean client = event.includeClient();
-        // Content that only the server cares about
+        // Content that only the server should care about, so anything that goes in /data
         boolean server = event.includeServer();
 
+        // Assets
         generator.addProvider(client, new NoxernaBlockStateProvider(output, existingFileHelper));
         generator.addProvider(client, new NoxernaLanguageProvider(output, existingFileHelper));
+
+        // Data
         BlockTagsProvider blockTags = new NoxernaBlockTagProvider(output, lookupProvider, existingFileHelper);
         generator.addProvider(server, blockTags);
-        generator.addProvider(server, new NoxernaItemTagProvider(output, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+        ItemTagsProvider itemTags = new NoxernaItemTagProvider(output, lookupProvider, blockTags.contentsGetter(), existingFileHelper);
+        generator.addProvider(server, itemTags);
+        generator.addProvider(server, new NoxernaRecipes(output, lookupProvider));
         generator.addProvider(server, new NoxernaLootTableProvider(output, lookupProvider));
     }
 }

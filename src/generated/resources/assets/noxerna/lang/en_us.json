@@ -1,5 +1,10 @@
 {
   "block.noxerna.noxum": "Noxum",
+  "block.noxerna.noxum_brick_slab": "Noxum Brick Slab",
+  "block.noxerna.noxum_brick_stairs": "Noxum Brick Stairs",
+  "block.noxerna.noxum_brick_wall": "Noxum Brick Wall",
+  "block.noxerna.noxum_bricks": "Noxum Bricks",
+  "block.noxerna.noxum_pressure_plate": "Noxum Pressure Plate",
   "block.noxerna.noxum_slab": "Noxum Slab",
   "block.noxerna.noxum_stairs": "Noxum Stairs",
   "block.noxerna.noxum_wall": "Noxum Wall",
@@ -7,5 +12,6 @@
   "block.noxerna.polished_noxum_slab": "Polished Noxum Slab",
   "block.noxerna.polished_noxum_stairs": "Polished Noxum Stairs",
   "block.noxerna.polished_noxum_wall": "Polished Noxum Wall",
-  "itemGroup.noxerna.mod_tab": "The Noxerna"
+  "gamerule.maxQuakeMagnitude": "Maximum Quake Magnitude",
+  "itemGroup.noxerna.building_blocks": "Noxerna Building Blocks"
 }

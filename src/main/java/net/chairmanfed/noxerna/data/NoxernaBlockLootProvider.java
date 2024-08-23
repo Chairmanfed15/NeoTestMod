@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data;
 
-import net.chairmanfed.noxerna.block.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -22,12 +22,17 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(NoxernaBlocks.NOXUM.get());
+        dropSelf(NoxernaBlocks.NOXUM_BRICKS.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM.get());
         dropSelf(NoxernaBlocks.NOXUM_STAIRS.get());
+        dropSelf(NoxernaBlocks.NOXUM_BRICK_STAIRS.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
         dropSlab(NoxernaBlocks.NOXUM_SLAB.get());
+        dropSlab(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
         dropSlab(NoxernaBlocks.POLISHED_NOXUM_SLAB.get());
         dropSelf(NoxernaBlocks.NOXUM_WALL.get());
+        dropSelf(NoxernaBlocks.NOXUM_BRICK_WALL.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
+        dropSelf(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
     }
 }

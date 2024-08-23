@@ -5,6 +5,9 @@
     "noxerna:noxum_wall",
     "noxerna:polished_noxum",
     "noxerna:polished_noxum_stairs",
-    "noxerna:polished_noxum_wall"
+    "noxerna:polished_noxum_wall",
+    "noxerna:noxum_bricks",
+    "noxerna:noxum_brick_stairs",
+    "noxerna:noxum_brick_wall"
   ]
 }

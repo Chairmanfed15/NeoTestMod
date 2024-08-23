@@ -4,9 +4,14 @@
     "noxerna:noxum_stairs",
     "noxerna:noxum_slab",
     "noxerna:noxum_wall",
+    "noxerna:noxum_pressure_plate",
     "noxerna:polished_noxum",
     "noxerna:polished_noxum_stairs",
     "noxerna:polished_noxum_slab",
-    "noxerna:polished_noxum_wall"
+    "noxerna:polished_noxum_wall",
+    "noxerna:noxum_bricks",
+    "noxerna:noxum_brick_stairs",
+    "noxerna:noxum_brick_slab",
+    "noxerna:noxum_brick_wall"
   ]
 }
