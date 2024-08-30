@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:noxum_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/noxum_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:noxum_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/noxum_brick_slab"
+    ]
+  }
+}

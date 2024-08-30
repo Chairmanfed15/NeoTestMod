@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "noxerna:textures/block/noxum_bricks.png",
+    "description": {
+      "translate": "advancement.noxerna.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "noxerna:noxum"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.noxerna.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

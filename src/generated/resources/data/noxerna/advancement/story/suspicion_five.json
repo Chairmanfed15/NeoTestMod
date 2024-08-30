@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/caught_mining",
+  "criteria": {
+    "suspicion_five": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.suspicion_five.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:barrier"
+    },
+    "title": {
+      "translate": "advancement.noxerna.suspicion_five.title"
+    }
+  },
+  "requirements": [
+    [
+      "suspicion_five"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

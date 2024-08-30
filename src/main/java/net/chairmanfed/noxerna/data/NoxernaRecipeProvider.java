@@ -15,6 +15,43 @@ public class NoxernaRecipeProvider extends RecipeProvider {
     public NoxernaRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
     }
+    // Shaped Recipes
+    public ShapedRecipeBuilder makeBricks(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public  ShapedRecipeBuilder makeStairs(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 4)
+                .pattern("#  ")
+                .pattern("## ")
+                .pattern("###")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeSlab(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 6)
+                .pattern("###")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeSlabIntoBlock(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
+                .pattern("#")
+                .pattern("#")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeWall(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 6)
+                .pattern("###")
+                .pattern("###")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    // Stonecutter Recipes
     public SingleItemRecipeBuilder stonecutting(TagKey<Item> input, ItemLike result) {
         return SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, result)
                 .unlockedBy("has_"+ input, has(input));

@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/root",
+  "criteria": {
+    "found_portal": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.find_abandoned_portal.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:rail"
+    },
+    "title": {
+      "translate": "advancement.noxerna.find_abandoned_portal.title"
+    }
+  },
+  "requirements": [
+    [
+      "found_portal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

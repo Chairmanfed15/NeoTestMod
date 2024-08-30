@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/caught_mining",
+  "criteria": {
+    "get_license": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.get_license.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_pickaxe"
+    },
+    "title": {
+      "translate": "advancement.noxerna.get_license.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_license"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

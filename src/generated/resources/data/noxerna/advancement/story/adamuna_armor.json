@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/mine_adamuna",
+  "criteria": {
+    "adamuna_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.adamuna_armor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:diamond_chestplate"
+    },
+    "title": {
+      "translate": "advancement.noxerna.adamuna_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "adamuna_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

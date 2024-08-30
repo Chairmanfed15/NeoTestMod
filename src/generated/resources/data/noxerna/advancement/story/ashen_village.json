@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/geothermal_outpost",
+  "criteria": {
+    "ashen_village": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.ashen_village.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:nether_brick_stairs"
+    },
+    "title": {
+      "translate": "advancement.noxerna.ashen_village.title"
+    }
+  },
+  "requirements": [
+    [
+      "ashen_village"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

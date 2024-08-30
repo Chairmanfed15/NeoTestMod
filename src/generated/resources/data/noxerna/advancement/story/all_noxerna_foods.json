@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/enter_noxerna",
+  "criteria": {
+    "all_noxerna_foods": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.all_noxerna_foods.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:cooked_beef"
+    },
+    "title": {
+      "translate": "advancement.noxerna.all_noxerna_foods.title"
+    }
+  },
+  "requirements": [
+    [
+      "all_noxerna_foods"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -25,6 +25,8 @@ public class NoxernaItemTagProvider extends ItemTagsProvider {
         this.copy(BlockTags.SLABS, ItemTags.SLABS);
         this.copy(BlockTags.WALLS, ItemTags.WALLS);
         tag(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT)
+                .addTag(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS);
+        tag(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS)
                 .add(NoxernaBlocks.NOXUM.get().asItem());
         tag(NoxernaTags.ItemTags.NOXUM_STONE_TYPE)
                 .add(NoxernaBlocks.NOXUM.get().asItem()).add(NoxernaBlocks.NOXUM_STAIRS.get().asItem())
@@ -32,5 +34,6 @@ public class NoxernaItemTagProvider extends ItemTagsProvider {
                 .add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())
                 .add(NoxernaBlocks.POLISHED_NOXUM_WALL.get().asItem()).add(NoxernaBlocks.NOXUM_BRICKS.get().asItem())
                 .add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem()).add(NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem());
+        this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);
     }
 }

@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/all_noxerna_foods",
+  "criteria": {
+    "all_noxerna_potions": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.all_noxerna_potions.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:cooked_beef"
+    },
+    "title": {
+      "translate": "advancement.noxerna.all_noxerna_potions.title"
+    }
+  },
+  "requirements": [
+    [
+      "all_noxerna_potions"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

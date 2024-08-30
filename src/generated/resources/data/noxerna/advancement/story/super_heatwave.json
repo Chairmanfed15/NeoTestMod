@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/superthermal_meter",
+  "criteria": {
+    "super_heatwave": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.super_heatwave.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.noxerna.super_heatwave.title"
+    }
+  },
+  "requirements": [
+    [
+      "super_heatwave"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

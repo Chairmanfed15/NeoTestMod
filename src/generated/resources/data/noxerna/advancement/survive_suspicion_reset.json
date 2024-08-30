@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/suspicion_five",
+  "criteria": {
+    "survive_suspicion_reset": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.survive_suspicion_reset.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:totem_of_undying"
+    },
+    "title": {
+      "translate": "advancement.noxerna.survive_suspicion_reset.title"
+    }
+  },
+  "requirements": [
+    [
+      "survive_suspicion_reset"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

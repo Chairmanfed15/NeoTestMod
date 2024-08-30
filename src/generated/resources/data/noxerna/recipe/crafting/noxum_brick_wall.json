@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "noxum_bricks",
+  "key": {
+    "#": {
+      "item": "noxerna:polished_noxum"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:noxum_brick_wall"
+  }
+}

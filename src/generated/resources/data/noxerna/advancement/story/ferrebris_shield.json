@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "ferrebris_shield": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.ferrebris_shield.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:shield"
+    },
+    "title": {
+      "translate": "advancement.noxerna.ferrebris_shield.title"
+    }
+  },
+  "requirements": [
+    [
+      "ferrebris_shield"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

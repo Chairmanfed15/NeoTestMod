@@ -1,6 +1,7 @@
 package net.chairmanfed.noxerna;
 
 import com.mojang.logging.LogUtils;
+import net.chairmanfed.noxerna.data.DataGenerators;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.chairmanfed.noxerna.registry.NoxernaCreativeModeTabs;
 import net.chairmanfed.noxerna.registry.NoxernaItems;
@@ -46,6 +47,7 @@ public class TheNoxerna
         NoxernaItems.ITEMS.register(modEventBus);
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         modEventBus.addListener(this::buildContents);
+        // modEventBus.addListener(DataGenerators::gatherData);
         NeoForge.EVENT_BUS.register(this);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

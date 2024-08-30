@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/explore_noble_gas_biomes",
+  "criteria": {
+    "breach_surface": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.breach_surface.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:campfire"
+    },
+    "title": {
+      "translate": "advancement.noxerna.breach_surface.title"
+    }
+  },
+  "requirements": [
+    [
+      "breach_surface"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

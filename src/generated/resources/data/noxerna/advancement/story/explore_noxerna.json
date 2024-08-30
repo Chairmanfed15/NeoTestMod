@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/breach_surface",
+  "criteria": {
+    "explore_noxerna": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.explore_noxerna.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_boots"
+    },
+    "title": {
+      "translate": "advancement.noxerna.explore_noxerna.title"
+    }
+  },
+  "requirements": [
+    [
+      "explore_noxerna"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "noxerna:story/open_void_well",
+  "criteria": {
+    "challenged_void_tyrant": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.noxerna.challenge_void_tyrant.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:trial_spawner"
+    },
+    "title": {
+      "translate": "advancement.noxerna.challenge_void_tyrant.title"
+    }
+  },
+  "requirements": [
+    [
+      "challenged_void_tyrant"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

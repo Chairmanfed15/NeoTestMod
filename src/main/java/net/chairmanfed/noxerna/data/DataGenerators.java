@@ -38,5 +38,6 @@ public class DataGenerators {
         generator.addProvider(server, itemTags);
         generator.addProvider(server, new NoxernaRecipes(output, lookupProvider));
         generator.addProvider(server, new NoxernaLootTableProvider(output, lookupProvider));
+        generator.addProvider(server, new NoxernaAdvancementProvider(output, lookupProvider, existingFileHelper));
     }
 }

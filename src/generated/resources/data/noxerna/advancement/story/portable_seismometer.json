@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/noxquake",
+  "criteria": {
+    "portable_seismometer": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.portable_seismometer.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.noxerna.portable_seismometer.title"
+    }
+  },
+  "requirements": [
+    [
+      "portable_seismometer"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

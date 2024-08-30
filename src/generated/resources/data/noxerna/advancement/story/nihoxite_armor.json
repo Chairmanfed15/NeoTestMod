@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/refine_nihoxite",
+  "criteria": {
+    "nihoxite_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.nihoxite_armor.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_chestplate"
+    },
+    "title": {
+      "translate": "advancement.noxerna.nihoxite_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "nihoxite_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

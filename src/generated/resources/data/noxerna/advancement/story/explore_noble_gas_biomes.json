@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/enter_noxerna",
+  "criteria": {
+    "noble_gas_biomes": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.explore_noble_gas_biomes.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:red_mushroom"
+    },
+    "title": {
+      "translate": "advancement.noxerna.explore_noble_gas_biomes.title"
+    }
+  },
+  "requirements": [
+    [
+      "noble_gas_biomes"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

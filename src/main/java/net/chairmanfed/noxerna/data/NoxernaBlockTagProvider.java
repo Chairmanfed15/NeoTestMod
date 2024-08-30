@@ -2,6 +2,7 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -39,5 +40,9 @@ public class NoxernaBlockTagProvider extends BlockTagsProvider {
                 .add(NoxernaBlocks.NOXUM_BRICK_WALL.get());
         tag(BlockTags.STONE_PRESSURE_PLATES)
                 .add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+        tag(NoxernaTags.BlockTags.PEBBLES)
+                .add(NoxernaBlocks.NOXUM_PEBBLE.get());
+        tag(NoxernaTags.BlockTags.QUAKE_IMMUNE)
+                .addTag(NoxernaTags.BlockTags.PEBBLES);
     }
 }

@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "ferrebris_pickaxe": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.ferrebris_tools.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_pickaxe"
+    },
+    "title": {
+      "translate": "advancement.noxerna.ferrebris_tools.title"
+    }
+  },
+  "requirements": [
+    [
+      "ferrebris_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/ore_refinery",
+  "criteria": {
+    "geothermal_outpost": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.geothermal_outpost.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:magma_block"
+    },
+    "title": {
+      "translate": "advancement.noxerna.geothermal_outpost.title"
+    }
+  },
+  "requirements": [
+    [
+      "geothermal_outpost"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

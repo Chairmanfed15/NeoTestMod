@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "superheated_lava_bucket": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.superheated_lava_bucket.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:lava_bucket"
+    },
+    "title": {
+      "translate": "advancement.noxerna.superheated_lava_bucket.title"
+    }
+  },
+  "requirements": [
+    [
+      "superheated_lava_bucket"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

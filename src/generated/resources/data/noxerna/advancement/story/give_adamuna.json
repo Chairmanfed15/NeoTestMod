@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/mine_adamuna",
+  "criteria": {
+    "give_adamuna": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.give_adamuna.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:diamond"
+    },
+    "title": {
+      "translate": "advancement.noxerna.give_adamuna.title"
+    }
+  },
+  "requirements": [
+    [
+      "give_adamuna"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "mine_native_minerals": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.mine_native_minerals.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:bundle"
+    },
+    "title": {
+      "translate": "advancement.noxerna.mine_native_minerals.title"
+    }
+  },
+  "requirements": [
+    [
+      "mine_native_minerals"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -34,5 +34,6 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.NOXUM_BRICK_WALL.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
         dropSelf(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.NOXUM_PEBBLE.get());
     }
 }

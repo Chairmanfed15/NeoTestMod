@@ -1,0 +1,33 @@
+{
+  "parent": "noxerna:story/noxerna_tools",
+  "criteria": {
+    "hard_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:completes_mine_hard_stone_advancement"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.mine_hard_stone.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "noxerna:noxum"
+    },
+    "title": {
+      "translate": "advancement.noxerna.mine_hard_stone.title"
+    }
+  },
+  "requirements": [
+    [
+      "hard_stone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

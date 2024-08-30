@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/mine_inperlum",
+  "criteria": {
+    "nihoxite_ingot": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.refine_nihoxite.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_ingot"
+    },
+    "title": {
+      "translate": "advancement.noxerna.refine_nihoxite.title"
+    }
+  },
+  "requirements": [
+    [
+      "nihoxite_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

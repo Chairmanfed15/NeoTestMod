@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "ferrebris_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.ferrebris_armor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_chestplate"
+    },
+    "title": {
+      "translate": "advancement.noxerna.ferrebris_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "ferrebris_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

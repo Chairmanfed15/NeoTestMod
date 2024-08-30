@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/awaken_megatomaton",
+  "criteria": {
+    "defeated_megatomaton": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.defeat_megatomaton.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:vault"
+    },
+    "title": {
+      "translate": "advancement.noxerna.defeat_megatomaton.title"
+    }
+  },
+  "requirements": [
+    [
+      "defeated_megatomaton"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/noxerna_fish",
+  "criteria": {
+    "superheated_lava_fish": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.superheated_lava_fish.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:fishing_rod"
+    },
+    "title": {
+      "translate": "advancement.noxerna.superheated_lava_fish.title"
+    }
+  },
+  "requirements": [
+    [
+      "superheated_lava_fish"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

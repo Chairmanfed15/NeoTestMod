@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/refine_nihoxite",
+  "criteria": {
+    "nihoxite_hoe": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.nihoxite_hoe.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_hoe"
+    },
+    "title": {
+      "translate": "advancement.noxerna.nihoxite_hoe.title"
+    }
+  },
+  "requirements": [
+    [
+      "nihoxite_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

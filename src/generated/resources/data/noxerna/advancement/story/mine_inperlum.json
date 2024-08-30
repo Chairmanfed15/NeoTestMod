@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/mine_adamuna",
+  "criteria": {
+    "raw_inperlum": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.mine_inperlum.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_scrap"
+    },
+    "title": {
+      "translate": "advancement.noxerna.mine_inperlum.title"
+    }
+  },
+  "requirements": [
+    [
+      "raw_inperlum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

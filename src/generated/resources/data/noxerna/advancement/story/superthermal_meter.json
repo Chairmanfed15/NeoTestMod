@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/ferrebris_tools",
+  "criteria": {
+    "superthermal_meter": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.superthermal_meter.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.noxerna.superthermal_meter.title"
+    }
+  },
+  "requirements": [
+    [
+      "superthermal_meter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

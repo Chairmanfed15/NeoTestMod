@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/kill_all_noxerna_mobs",
+  "criteria": {
+    "complete_all_challenges": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.complete_all_challenges.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:bucket"
+    },
+    "title": {
+      "translate": "advancement.noxerna.complete_all_challenges.title"
+    }
+  },
+  "requirements": [
+    [
+      "complete_all_challenges"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

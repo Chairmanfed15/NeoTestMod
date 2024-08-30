@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/mine_hard_stone",
+  "criteria": {
+    "ferrebris_ingot": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.smelt_ferrebris.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_ingot"
+    },
+    "title": {
+      "translate": "advancement.noxerna.smelt_ferrebris.title"
+    }
+  },
+  "requirements": [
+    [
+      "ferrebris_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/find_pale_castle",
+  "criteria": {
+    "void_key": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.void_key.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:ominous_trial_key"
+    },
+    "title": {
+      "translate": "advancement.noxerna.void_key.title"
+    }
+  },
+  "requirements": [
+    [
+      "void_key"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

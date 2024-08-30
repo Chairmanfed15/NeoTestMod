@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/liquefied_shadow_fish",
+  "criteria": {
+    "catch_all_fish": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.catch_all_fish.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:fishing_rod"
+    },
+    "title": {
+      "translate": "advancement.noxerna.catch_all_fish.title"
+    }
+  },
+  "requirements": [
+    [
+      "catch_all_fish"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

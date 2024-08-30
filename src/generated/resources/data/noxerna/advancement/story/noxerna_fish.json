@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/enter_noxerna",
+  "criteria": {
+    "noxerna_fish": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.noxerna_fish.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:fishing_rod"
+    },
+    "title": {
+      "translate": "advancement.noxerna.noxerna_fish.title"
+    }
+  },
+  "requirements": [
+    [
+      "noxerna_fish"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

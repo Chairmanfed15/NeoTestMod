@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/season_radar",
+  "criteria": {
+    "full_noxerna_year": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.full_noxerna_year.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.noxerna.full_noxerna_year.title"
+    }
+  },
+  "requirements": [
+    [
+      "full_noxerna_year"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

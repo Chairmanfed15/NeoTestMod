@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/find_megatomaton_arena",
+  "criteria": {
+    "awakened_megatomaton": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.awaken_megatomaton.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:trial_spawner"
+    },
+    "title": {
+      "translate": "advancement.noxerna.awaken_megatomaton.title"
+    }
+  },
+  "requirements": [
+    [
+      "awakened_megatomaton"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

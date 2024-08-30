@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "season_radar": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.season_radar.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.noxerna.season_radar.title"
+    }
+  },
+  "requirements": [
+    [
+      "season_radar"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

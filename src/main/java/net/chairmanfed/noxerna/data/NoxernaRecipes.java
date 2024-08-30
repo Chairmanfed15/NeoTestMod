@@ -19,6 +19,51 @@ public class NoxernaRecipes extends NoxernaRecipeProvider{
     }
     @Override
     protected void buildRecipes (RecipeOutput output) {
+        // Building Block Recipes
+        makeStairs(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_STAIRS.get().asItem())
+                .group("noxum")
+                .save(output, name("crafting/noxum_stairs"));
+        makeSlab(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_SLAB.get().asItem())
+                .group("noxum")
+                .save(output, name("crafting/noxum_slab"));
+        makeSlabIntoBlock(NoxernaBlocks.NOXUM_SLAB.get().asItem(), NoxernaBlocks.NOXUM.get().asItem())
+                .group("noxum")
+                .save(output, name("crafting/noxum_from_slab"));
+        makeWall(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_WALL.get().asItem())
+                .group("noxum")
+                .save(output, name("crafting/noxum_wall"));
+        makeBricks(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM.get().asItem())
+                .group("polished_noxum")
+                .save(output, name("crafting/polished_noxum"));
+        makeStairs(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())
+                .group("polished_noxum")
+                .save(output, name("crafting/polished_noxum_stairs"));
+        makeSlab(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM_SLAB.get().asItem())
+                .group("polished_noxum")
+                .save(output, name("crafting/polished_noxum_slab"));
+        makeSlabIntoBlock(NoxernaBlocks.POLISHED_NOXUM_SLAB.get().asItem(), NoxernaBlocks.POLISHED_NOXUM.get().asItem())
+                .group("polished_noxum")
+                .save(output, name("crafting/polished_noxum_from_slab"));
+        makeWall(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM_WALL.get().asItem())
+                .group("polished_noxum")
+                .save(output, name("crafting/polished_noxum_wall"));
+        makeBricks(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.NOXUM_BRICKS.get().asItem())
+                .group("noxum_bricks")
+                .save(output, name("crafting/noxum_bricks"));
+        makeStairs(NoxernaBlocks.NOXUM_BRICKS.get().asItem(), NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem())
+                .group("noxum_bricks")
+                .save(output, name("crafting/noxum_brick_stairs"));
+        makeSlab(NoxernaBlocks.NOXUM_BRICKS.get().asItem(), NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem())
+                .group("noxum_bricks")
+                .save(output, name("crafting/noxum_brick_slab"));
+        makeSlabIntoBlock(NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem(), NoxernaBlocks.NOXUM_BRICKS.get().asItem())
+                .group("noxum_brick")
+                .save(output, name("crafting/noxum_bricks_from_slab"));
+        makeWall(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
+                .group("noxum_bricks")
+                .save(output, name("crafting/noxum_brick_wall"));
+
+        // Stonecutting Recipes
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM.get().asItem())
                 .save(output, name("stonecutting/noxum_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_STAIRS.get().asItem())

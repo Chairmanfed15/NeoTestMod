@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/defeat_void_tyrant",
+  "criteria": {
+    "kill_all_noxerna_mobs": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.kill_all_noxerna_mobs.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_sword"
+    },
+    "title": {
+      "translate": "advancement.noxerna.kill_all_noxerna_mobs.title"
+    }
+  },
+  "requirements": [
+    [
+      "kill_all_noxerna_mobs"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/ashen_village",
+  "criteria": {
+    "sulfernus_arena": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.find_sulfernus_arena.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:reinforced_deepslate"
+    },
+    "title": {
+      "translate": "advancement.noxerna.find_sulfernus_arena.title"
+    }
+  },
+  "requirements": [
+    [
+      "sulfernus_arena"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

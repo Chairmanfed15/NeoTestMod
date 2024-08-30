@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/enter_noxerna",
+  "criteria": {
+    "noxerna_railway": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.noxerna_railway.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:rail"
+    },
+    "title": {
+      "translate": "advancement.noxerna.noxerna_railway.title"
+    }
+  },
+  "requirements": [
+    [
+      "noxerna_railway"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

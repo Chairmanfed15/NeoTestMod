@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/ferrebris_tools",
+  "criteria": {
+    "adamuna": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.mine_adamuna.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:diamond"
+    },
+    "title": {
+      "translate": "advancement.noxerna.mine_adamuna.title"
+    }
+  },
+  "requirements": [
+    [
+      "adamuna"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

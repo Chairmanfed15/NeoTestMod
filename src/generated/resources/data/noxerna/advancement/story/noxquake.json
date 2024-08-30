@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/mine_hard_stone",
+  "criteria": {
+    "noxquake": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.noxquake.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "noxerna:noxum"
+    },
+    "title": {
+      "translate": "advancement.noxerna.noxquake.title"
+    }
+  },
+  "requirements": [
+    [
+      "noxquake"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/ancient_fortress",
+  "criteria": {
+    "find_pale_castle": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.find_pale_castle.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:quartz_bricks"
+    },
+    "title": {
+      "translate": "advancement.noxerna.find_pale_castle.title"
+    }
+  },
+  "requirements": [
+    [
+      "find_pale_castle"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

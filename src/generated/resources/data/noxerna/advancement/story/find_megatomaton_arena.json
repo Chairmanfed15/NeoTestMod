@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/ore_refinery",
+  "criteria": {
+    "megatomaton_arena": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.find_megatomaton_arena.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:crafter"
+    },
+    "title": {
+      "translate": "advancement.noxerna.find_megatomaton_arena.title"
+    }
+  },
+  "requirements": [
+    [
+      "megatomaton_arena"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

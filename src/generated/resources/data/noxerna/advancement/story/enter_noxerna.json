@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/find_abandoned_portal",
+  "criteria": {
+    "entered_noxerna": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.enter_noxerna.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:flint_and_steel"
+    },
+    "title": {
+      "translate": "advancement.noxerna.enter_noxerna.title"
+    }
+  },
+  "requirements": [
+    [
+      "entered_noxerna"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/void_key",
+  "criteria": {
+    "open_void_well": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.open_void_well.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:end_portal_frame"
+    },
+    "title": {
+      "translate": "advancement.noxerna.open_void_well.title"
+    }
+  },
+  "requirements": [
+    [
+      "open_void_well"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

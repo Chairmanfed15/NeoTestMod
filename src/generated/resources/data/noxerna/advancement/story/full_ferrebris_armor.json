@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/ferrebris_armor",
+  "criteria": {
+    "full_ferrebris_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.full_ferrebris_armor.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_chestplate"
+    },
+    "title": {
+      "translate": "advancement.noxerna.full_ferrebris_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "full_ferrebris_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

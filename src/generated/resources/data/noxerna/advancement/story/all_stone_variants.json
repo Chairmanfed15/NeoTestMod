@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/mine_hard_stone",
+  "criteria": {
+    "all_stone_variants": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.all_stone_variants.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "noxerna:noxum_bricks"
+    },
+    "title": {
+      "translate": "advancement.noxerna.all_stone_variants.title"
+    }
+  },
+  "requirements": [
+    [
+      "all_stone_variants"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/smelt_ferrebris",
+  "criteria": {
+    "attunement_alchemy": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.attunement_alchemy.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:beacon"
+    },
+    "title": {
+      "translate": "advancement.noxerna.attunement_alchemy.title"
+    }
+  },
+  "requirements": [
+    [
+      "attunement_alchemy"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

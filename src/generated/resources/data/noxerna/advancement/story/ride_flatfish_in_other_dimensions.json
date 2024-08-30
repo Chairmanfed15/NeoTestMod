@@ -1,0 +1,27 @@
+{
+  "parent": "noxerna:story/ride_flatfish",
+  "criteria": {
+    "ride_flatfish_in_other_dimensions": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.ride_flatfish_in_other_dimensions.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:saddle"
+    },
+    "title": {
+      "translate": "advancement.noxerna.ride_flatfish_in_other_dimensions.title"
+    }
+  },
+  "requirements": [
+    [
+      "ride_flatfish_in_other_dimensions"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

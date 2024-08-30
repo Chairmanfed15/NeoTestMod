@@ -1,0 +1,26 @@
+{
+  "parent": "noxerna:story/noxerna_railway",
+  "criteria": {
+    "ore_refinery": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.ore_refinery.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:furnace"
+    },
+    "title": {
+      "translate": "advancement.noxerna.ore_refinery.title"
+    }
+  },
+  "requirements": [
+    [
+      "ore_refinery"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

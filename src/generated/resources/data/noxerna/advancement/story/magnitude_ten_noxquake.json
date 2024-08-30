@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/portable_seismometer",
+  "criteria": {
+    "magnitude_ten_noxquake": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.magnitude_ten_noxquake.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.noxerna.magnitude_ten_noxquake.title"
+    }
+  },
+  "requirements": [
+    [
+      "magnitude_ten_noxquake"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
