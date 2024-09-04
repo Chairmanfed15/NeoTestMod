@@ -1,0 +1,76 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "noxerna:block/noxum_pebble"
+      },
+      "when": {
+        "pebbles": "1",
+        "waterlogged": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/noxum_pebble"
+      },
+      "when": {
+        "pebbles": "1",
+        "waterlogged": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/two_noxum_pebbles"
+      },
+      "when": {
+        "pebbles": "2",
+        "waterlogged": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/two_noxum_pebbles"
+      },
+      "when": {
+        "pebbles": "2",
+        "waterlogged": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/three_noxum_pebbles"
+      },
+      "when": {
+        "pebbles": "3",
+        "waterlogged": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/three_noxum_pebbles"
+      },
+      "when": {
+        "pebbles": "3",
+        "waterlogged": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/four_noxum_pebbles"
+      },
+      "when": {
+        "pebbles": "4",
+        "waterlogged": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "noxerna:block/four_noxum_pebbles"
+      },
+      "when": {
+        "pebbles": "4",
+        "waterlogged": "true"
+      }
+    }
+  ]
+}

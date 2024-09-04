@@ -1,6 +1,7 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.data.providers.NoxernaRecipeProvider;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -10,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.concurrent.CompletableFuture;
 
-public class NoxernaRecipes extends NoxernaRecipeProvider{
+public class NoxernaRecipes extends NoxernaRecipeProvider {
     public NoxernaRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
     }

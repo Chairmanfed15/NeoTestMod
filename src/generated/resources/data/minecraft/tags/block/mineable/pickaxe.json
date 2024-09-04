@@ -12,6 +12,7 @@
     "noxerna:noxum_bricks",
     "noxerna:noxum_brick_stairs",
     "noxerna:noxum_brick_slab",
-    "noxerna:noxum_brick_wall"
+    "noxerna:noxum_brick_wall",
+    "noxerna:noxum_pebble"
   ]
 }

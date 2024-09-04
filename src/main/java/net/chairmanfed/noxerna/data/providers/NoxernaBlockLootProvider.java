@@ -1,4 +1,4 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.providers;
 
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.minecraft.core.HolderLookup;
@@ -16,8 +16,8 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         return NoxernaBlocks.BLOCKS.getEntries().stream().map(e -> (Block) e.value()).toList();
     }
-    protected void dropSlab(Block pSlabBlock){
-        this.add(pSlabBlock, pDouble -> this.createSlabItemTable(pDouble));
+    protected void dropSlab(Block slabBlock){
+        this.add(slabBlock, doubleSlab -> this.createSlabItemTable(doubleSlab));
     }
     @Override
     protected void generate() {

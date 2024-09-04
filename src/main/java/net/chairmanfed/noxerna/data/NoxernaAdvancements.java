@@ -83,14 +83,14 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .save(saver, TheNoxerna.MODID + ":story/enter_noxerna");
         // Exploring the Noxerna storyline
         // Find any of the Noblephyte Biomes
-        AdvancementHolder EXPLORE_NOBLE_GAS_BIOMES = Advancement.Builder.advancement()
+        AdvancementHolder EXPLORE_NOBLEPHYTE_BIOMES = Advancement.Builder.advancement()
                 .parent(ENTER_NOXERNA)
                 .display(
                         new ItemStack(Items.RED_MUSHROOM),
                         Component.translatable(
-                                "advancement." + TheNoxerna.MODID + ".explore_noble_gas_biomes.title"),
+                                "advancement." + TheNoxerna.MODID + ".explore_noblephyte_biomes.title"),
                         Component.translatable(
-                                "advancement." + TheNoxerna.MODID + ".explore_noble_gas_biomes.description"),
+                                "advancement." + TheNoxerna.MODID + ".explore_noblephyte_biomes.description"),
                         null,
                         AdvancementType.GOAL,
                         true,
@@ -102,7 +102,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .save(saver, TheNoxerna.MODID + ":story/explore_noble_gas_biomes");
         // Reach the Surface
         AdvancementHolder BREACH_SURFACE = Advancement.Builder.advancement()
-                .parent(EXPLORE_NOBLE_GAS_BIOMES)
+                .parent(EXPLORE_NOBLEPHYTE_BIOMES)
                 .display(
                         new ItemStack(Items.CAMPFIRE),
                         Component.translatable(

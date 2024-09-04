@@ -1,4 +1,4 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.providers;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

@@ -60,6 +60,7 @@ public class TheNoxerna
             event.accept(NoxernaBlocks.NOXUM_WALL.get());
             event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
             // event.accept(NoxernaBlocks.NOXUM_BUTTON.get());
+            event.accept(NoxernaBlocks.NOXUM_PEBBLE.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
             event.accept(NoxernaBlocks.POLISHED_NOXUM_SLAB.get());
@@ -71,6 +72,7 @@ public class TheNoxerna
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(NoxernaBlocks.NOXUM.get());
+            event.accept(NoxernaBlocks.NOXUM_PEBBLE.get());
         }
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());

@@ -13,10 +13,10 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class NoxernaItemTagProvider extends ItemTagsProvider {
-    public NoxernaItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-                                  CompletableFuture<TagLookup<Block>> blockTags,
-                                  ExistingFileHelper existingFileHelper) {
+public class NoxernaItemTags extends ItemTagsProvider {
+    public NoxernaItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+                           CompletableFuture<TagLookup<Block>> blockTags,
+                           ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, TheNoxerna.MODID, existingFileHelper);
     }
     @Override

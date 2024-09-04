@@ -11,9 +11,9 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class NoxernaBlockTagProvider extends BlockTagsProvider {
-    public NoxernaBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-                                   ExistingFileHelper existingFileHelper) {
+public class NoxernaBlockTags extends BlockTagsProvider {
+    public NoxernaBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+                            ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, TheNoxerna.MODID, existingFileHelper);
     }
 
@@ -26,7 +26,7 @@ public class NoxernaBlockTagProvider extends BlockTagsProvider {
                 .add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get()).add(NoxernaBlocks.POLISHED_NOXUM_SLAB.get())
                 .add(NoxernaBlocks.POLISHED_NOXUM_WALL.get()).add(NoxernaBlocks.NOXUM_BRICKS.get())
                 .add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get()).add(NoxernaBlocks.NOXUM_BRICK_SLAB.get())
-                .add(NoxernaBlocks.NOXUM_BRICK_WALL.get());
+                .add(NoxernaBlocks.NOXUM_BRICK_WALL.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get());
         tag(BlockTags.SCULK_REPLACEABLE)
                 .add(NoxernaBlocks.NOXUM.get());
         tag(BlockTags.STAIRS)

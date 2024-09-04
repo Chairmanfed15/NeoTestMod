@@ -29,10 +29,10 @@ public class PebbleBlock extends Block implements SimpleWaterloggedBlock {
     public static final int MAX_PEBBLES = 4;
     public static final IntegerProperty PEBBLES = NoxernaBlockStateProperties.PEBBLE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    protected static final VoxelShape ONE_AABB = Block.box(6.0, 0.0, 6.0, 10.0, 6.0, 10.0);
-    protected static final VoxelShape TWO_AABB = Block.box(6.0, 0.0, 6.0, 10.0, 6.0, 10.0);
-    protected static final VoxelShape THREE_AABB = Block.box(6.0, 0.0, 6.0, 10.0, 6.0, 10.0);
-    protected static final VoxelShape FOUR_AABB = Block.box(6.0, 0.0, 6.0, 10.0, 6.0, 10.0);
+    protected static final VoxelShape ONE_AABB = Block.box(6.0, 0.0, 6.0, 10.0, 2.0, 10.0);
+    protected static final VoxelShape TWO_AABB = Block.box(2.0, 0.0, 2.0, 14.0, 3.0, 14.0);
+    protected static final VoxelShape THREE_AABB = Block.box(2.0, 0.0, 2.0, 14.0, 3.0, 14.0);
+    protected static final VoxelShape FOUR_AABB = Block.box(1.0, 0.0, 1.0, 15.0, 4.0, 15.0);
 
     @Override
     public MapCodec<PebbleBlock> codec() {
@@ -102,8 +102,8 @@ public class PebbleBlock extends Block implements SimpleWaterloggedBlock {
         return pState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(pState);
     }
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(PEBBLES, WATERLOGGED);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(PEBBLES, WATERLOGGED);
     }
     @Override
     protected boolean isPathfindable(BlockState pState, PathComputationType pPathComputationType) {

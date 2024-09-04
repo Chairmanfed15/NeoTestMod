@@ -23,7 +23,8 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaBlocks.NOXUM_SLAB);
                         output.accept(NoxernaBlocks.NOXUM_WALL);
                         output.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE);
-                        // output.accept(NoxernaBlocks.NOXUM_BUTTON.get());
+                        // output.accept(NoxernaBlocks.NOXUM_BUTTON);
+                        output.accept(NoxernaBlocks.NOXUM_PEBBLE);
                         output.accept(NoxernaBlocks.POLISHED_NOXUM);
                         output.accept(NoxernaBlocks.POLISHED_NOXUM_STAIRS);
                         output.accept(NoxernaBlocks.POLISHED_NOXUM_SLAB);

@@ -7,7 +7,7 @@
   },
   "display": {
     "description": {
-      "translate": "advancement.noxerna.explore_noble_gas_biomes.description"
+      "translate": "advancement.noxerna.explore_noblephyte_biomes.description"
     },
     "frame": "goal",
     "icon": {
@@ -15,7 +15,7 @@
       "id": "minecraft:red_mushroom"
     },
     "title": {
-      "translate": "advancement.noxerna.explore_noble_gas_biomes.title"
+      "translate": "advancement.noxerna.explore_noblephyte_biomes.title"
     }
   },
   "requirements": [

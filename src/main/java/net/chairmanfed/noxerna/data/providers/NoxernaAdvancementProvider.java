@@ -1,5 +1,6 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.providers;
 
+import net.chairmanfed.noxerna.data.NoxernaAdvancements;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.AdvancementProvider;
