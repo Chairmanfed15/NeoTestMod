@@ -7,6 +7,7 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
@@ -43,9 +44,17 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addBlock(NoxernaBlocks.POLISHED_NOXUM_SLAB, "Polished Noxum Slab");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_WALL, "Polished Noxum Wall");
 
-        add(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, "Any Noxum Stone");
+        addBlock(NoxernaBlocks.VOIDROCK, "Voidrock");
+
+        add(NoxernaTags.BlockTags.BOSS_IMMUNE, "Bosses Cannot Destroy");
+        add(NoxernaTags.BlockTags.INFINIBURN_NOXERNA, "Burns Forever in Noxerna");
+        add(NoxernaTags.BlockTags.PEBBLES, "Pebbles");
+        add(NoxernaTags.BlockTags.QUAKE_IMMUNE, "Immune to Quakes");
+
         add(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT, "Completes Hard Shadowy Rock");
+        add(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, "Any Noxum Stone");
         add(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, "Noxstone Tool Materials");
+        add(NoxernaTags.ItemTags.PEBBLES, "Pebbles");
 
         // Root + Enter Noxerna Storyline
         addAdvancement("root", "Noxerna", "Bring a Torch or 64");
@@ -145,7 +154,8 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addAdvancement("geothermal_outpost", "Resting Flame",
                 "Stumble upon an old outpost overtaken by a geothermal hotspot");
         addAdvancement("ashen_village", "Civilization..?", "Discover the ashen remains of a village");
-        addAdvancement("find_sulfernus_arena", "City of Cinders", "Find the city lost to lava and ash");
+        addAdvancement("find_sulfernus_arena",
+                "City of Cinders", "Find the city lost to lava and ash");
         addAdvancement("awaken_sulfernus", "Agni Kai",
                 "Challenge Sulfernus, the Everburning Inferno");
         addAdvancement("defeat_sulfernus", "Extinguished",

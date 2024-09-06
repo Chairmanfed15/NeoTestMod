@@ -139,9 +139,15 @@
   "block.noxerna.polished_noxum_slab": "Polished Noxum Slab",
   "block.noxerna.polished_noxum_stairs": "Polished Noxum Stairs",
   "block.noxerna.polished_noxum_wall": "Polished Noxum Wall",
+  "block.noxerna.voidrock": "Voidrock",
   "gamerule.maxQuakeMagnitude": "Maximum Quake Magnitude",
   "itemGroup.noxerna.building_blocks": "Noxerna Building Blocks",
+  "tag.block.noxerna.boss_immune": "Bosses Cannot Destroy",
+  "tag.block.noxerna.infiniburn_noxerna": "Burns Forever in Noxerna",
+  "tag.block.noxerna.pebbles": "Pebbles",
+  "tag.block.noxerna.quake_immune": "Immune to Quakes",
   "tag.item.noxerna.completes_mine_hard_stone_advancement": "Completes Hard Shadowy Rock",
   "tag.item.noxerna.noxstone_tool_materials": "Noxstone Tool Materials",
+  "tag.item.noxerna.pebbles": "Pebbles",
   "tag.item.noxerna.stone_types.noxum": "Any Noxum Stone"
 }

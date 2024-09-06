@@ -1,0 +1,11 @@
+{
+  "type": "noxerna:the_noxerna",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "noxerna:noxum_depths"
+    },
+    "settings": "noxerna:the_noxerna"
+  }
+}

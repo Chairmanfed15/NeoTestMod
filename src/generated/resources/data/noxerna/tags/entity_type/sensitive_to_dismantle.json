@@ -1,0 +1,14 @@
+{
+  "values": [
+    "minecraft:iron_golem",
+    "minecraft:snow_golem",
+    "minecraft:shulker",
+    "minecraft:guardian",
+    "minecraft:elder_guardian",
+    "minecraft:wither",
+    {
+      "id": "#noxerna:automatons",
+      "required": false
+    }
+  ]
+}

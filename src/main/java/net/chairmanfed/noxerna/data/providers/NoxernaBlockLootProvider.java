@@ -5,6 +5,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
 
 import java.util.Set;
 
@@ -24,6 +25,7 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.NOXUM.get());
         dropSelf(NoxernaBlocks.NOXUM_BRICKS.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM.get());
+        noDrop(NoxernaBlocks.VOIDROCK.get());
         dropSelf(NoxernaBlocks.NOXUM_STAIRS.get());
         dropSelf(NoxernaBlocks.NOXUM_BRICK_STAIRS.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
@@ -35,5 +37,9 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
         dropSelf(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
         dropSelf(NoxernaBlocks.NOXUM_PEBBLE.get());
+    }
+
+    private LootTable.Builder noDrop(Block block) {
+        return LootTable.lootTable();
     }
 }

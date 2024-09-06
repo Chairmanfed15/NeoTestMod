@@ -6,6 +6,7 @@ import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -40,6 +41,23 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.NOXUM_BRICK_WALL.get());
         tag(BlockTags.STONE_PRESSURE_PLATES)
                 .add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+        tag(BlockTags.GEODE_INVALID_BLOCKS)
+                .add(NoxernaBlocks.VOIDROCK.get());
+        tag(BlockTags.LAVA_POOL_STONE_CANNOT_REPLACE)
+                .add(NoxernaBlocks.VOIDROCK.get());
+        tag(BlockTags.WITHER_IMMUNE)
+                .add(NoxernaBlocks.VOIDROCK.get());
+        tag(BlockTags.DRAGON_IMMUNE)
+                .add(NoxernaBlocks.VOIDROCK.get());
+        tag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS)
+                .add(NoxernaBlocks.VOIDROCK.get());
+        tag(BlockTags.FEATURES_CANNOT_REPLACE)
+                .add(NoxernaBlocks.VOIDROCK.get());
+        tag(NoxernaTags.BlockTags.BOSS_IMMUNE)
+                .addTag(BlockTags.WITHER_IMMUNE);
+        tag(NoxernaTags.BlockTags.INFINIBURN_NOXERNA)
+                .addTag(BlockTags.INFINIBURN_OVERWORLD)
+                .add(NoxernaBlocks.VOIDROCK.get());
         tag(NoxernaTags.BlockTags.PEBBLES)
                 .add(NoxernaBlocks.NOXUM_PEBBLE.get());
         tag(NoxernaTags.BlockTags.QUAKE_IMMUNE)

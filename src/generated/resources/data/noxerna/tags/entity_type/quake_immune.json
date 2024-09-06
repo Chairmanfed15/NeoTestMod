@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#minecraft:impact_projectiles",
+    "#minecraft:redirectable_projectile",
+    "#c:bosses",
+    "#c:minecarts",
+    "#c:boats",
+    "minecraft:end_crystal"
+  ]
+}

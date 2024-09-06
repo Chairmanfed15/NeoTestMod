@@ -26,6 +26,8 @@ public class NoxernaBlocks {
             "polished_noxum", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(4.5f).explosionResistance(6.0f)
                     .sound(SoundType.POLISHED_DEEPSLATE).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> VOIDROCK = BLOCKS.register(
+        "voidrock", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)));
 
     public static final DeferredBlock<Block> NOXUM_STAIRS = BLOCKS.register(
             "noxum_stairs", () -> new StairBlock(NOXUM.get().defaultBlockState(),

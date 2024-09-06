@@ -24,6 +24,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
         this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
         this.copy(BlockTags.SLABS, ItemTags.SLABS);
         this.copy(BlockTags.WALLS, ItemTags.WALLS);
+        tag(ItemTags.STONE_CRAFTING_MATERIALS)
+                .addTag(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT);
         tag(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT)
                 .addTag(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS);
         tag(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS)

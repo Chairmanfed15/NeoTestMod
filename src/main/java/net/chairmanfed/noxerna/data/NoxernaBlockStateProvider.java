@@ -38,6 +38,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.NOXUM);
         blockWithItem(NoxernaBlocks.NOXUM_BRICKS);
         blockWithItem(NoxernaBlocks.POLISHED_NOXUM);
+        blockWithItem(NoxernaBlocks.VOIDROCK);
         stairBlockWithItem(NoxernaBlocks.NOXUM_STAIRS, NoxernaBlocks.NOXUM);
         stairBlockWithItem(NoxernaBlocks.NOXUM_BRICK_STAIRS, NoxernaBlocks.NOXUM_BRICKS);
         stairBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_STAIRS, NoxernaBlocks.POLISHED_NOXUM);

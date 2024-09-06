@@ -3,6 +3,7 @@ package net.chairmanfed.noxerna.data.providers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -49,6 +50,29 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("###")
                 .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder packing3x3(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', input)
+                .unlockedBy("has" + input, has(input));
+    }
+    public ShapedRecipeBuilder packing3x3(Item input, ItemLike result, Item tagInput) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
+                .pattern("###")
+                .pattern("#$#")
+                .pattern("###")
+                .define('#', input)
+                .define('$', tagInput)
+                .unlockedBy("has" + input, has(input));
+    }
+    // Shapeless Recipes
+    public ShapelessRecipeBuilder unpacking3x3(Item input, ItemLike result) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result, 9)
+                .requires(input)
                 .unlockedBy("has_" + input, has(input));
     }
     // Stonecutter Recipes

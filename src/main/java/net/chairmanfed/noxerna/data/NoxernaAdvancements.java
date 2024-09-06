@@ -208,7 +208,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 )
                 .addCriterion("survive_suspicion_reset",
                         CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
-                .save(saver, TheNoxerna.MODID + ":survive_suspicion_reset");
+                .save(saver, TheNoxerna.MODID + ":story/survive_suspicion_reset");
         // Foods & Potions storyline
         // Eat all Noxerna Foods
         AdvancementHolder ALL_NOXERNA_FOODS = Advancement.Builder.advancement()

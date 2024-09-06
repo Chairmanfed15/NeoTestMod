@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "noxum",
+  "ingredients": [
+    {
+      "item": "noxerna:noxum"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:noxum_pebble"
+  }
+}

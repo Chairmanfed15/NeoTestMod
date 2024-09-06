@@ -22,6 +22,8 @@ public class NoxernaItems {
             "noxum_bricks", NoxernaBlocks.NOXUM_BRICKS);
     public static final Supplier<Item> POLISHED_NOXUM = registerBlockItem(
             "polished_noxum", NoxernaBlocks.POLISHED_NOXUM);
+    public static final Supplier<Item> VOIDROCK = registerBlockItem(
+            "voidrock", NoxernaBlocks.VOIDROCK);
     public static final Supplier<Item> NOXUM_STAIRS = registerBlockItem(
             "noxum_stairs", NoxernaBlocks.NOXUM_STAIRS);
     public static final Supplier<Item> NOXUM_BRICK_STAIRS = registerBlockItem(

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "noxum",
+  "key": {
+    "#": {
+      "item": "noxerna:noxum_pebble"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:noxum"
+  }
+}

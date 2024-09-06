@@ -33,6 +33,12 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeWall(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_WALL.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_wall"));
+        unpacking3x3(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_PEBBLE.get().asItem())
+                .group("noxum")
+                .save(output, name("crafting/noxum_pebble"));
+        packing3x3(NoxernaBlocks.NOXUM_PEBBLE.get().asItem(), NoxernaBlocks.NOXUM.get().asItem())
+                .group("noxum")
+                .save(output, name("crafting/noxum_from_pebble"));
         makeBricks(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM.get().asItem())
                 .group("polished_noxum")
                 .save(output, name("crafting/polished_noxum"));
@@ -73,6 +79,8 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/noxum_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_WALL.get().asItem())
                 .save(output, name("stonecutting/noxum_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_PEBBLE.get().asItem(), 9)
+                .save(output, name("stonecutting/noxum_pebble_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.POLISHED_NOXUM.get().asItem())
                 .save(output, name("stonecutting/polished_noxum_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())
