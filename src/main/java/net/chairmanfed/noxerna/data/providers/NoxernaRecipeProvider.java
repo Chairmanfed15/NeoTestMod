@@ -67,7 +67,7 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .define('#', input)
                 .define('$', tagInput)
-                .unlockedBy("has" + input, has(input));
+                .unlockedBy("has_" + input, has(input));
     }
     // Shapeless Recipes
     public ShapelessRecipeBuilder unpacking3x3(Item input, ItemLike result) {
