@@ -1,7 +1,7 @@
 {
   "parent": "noxerna:story/enter_noxerna",
   "criteria": {
-    "noble_gas_biomes": {
+    "noblephyte_biomes": {
       "trigger": "minecraft:impossible"
     }
   },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "noble_gas_biomes"
+      "noblephyte_biomes"
     ]
   ],
   "sends_telemetry_event": true

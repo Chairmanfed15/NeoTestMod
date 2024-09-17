@@ -2,7 +2,14 @@
   "parent": "noxerna:story/mine_inperlum",
   "criteria": {
     "nihoxite_ingot": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:nihoxite_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -12,7 +19,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "minecraft:netherite_ingot"
+      "id": "noxerna:nihoxite_ingot"
     },
     "title": {
       "translate": "advancement.noxerna.refine_nihoxite.title"

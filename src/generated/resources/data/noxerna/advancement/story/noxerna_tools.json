@@ -2,7 +2,14 @@
   "parent": "noxerna:story/enter_noxerna",
   "criteria": {
     "any_noxerna_pickaxe": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:completes_noxerna_tools_advancement"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -11,7 +18,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:stone_pickaxe"
+      "id": "noxerna:noblewood_pickaxe"
     },
     "title": {
       "translate": "advancement.noxerna.noxerna_tools.title"

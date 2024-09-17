@@ -1,32 +1,50 @@
 package net.chairmanfed.noxerna.data;
 
+import com.google.common.collect.ImmutableList;
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
-import net.chairmanfed.noxerna.registry.NoxernaTags;
+import net.chairmanfed.noxerna.registry.*;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementRequirements;
 import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.advancements.CriterionTrigger;
-import net.minecraft.advancements.critereon.ImpossibleTrigger;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.advancements.critereon.PlayerTrigger;
+import net.minecraft.advancements.critereon.*;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.HolderSet;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.advancements.packs.VanillaAdventureAdvancements;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.biome.Biome;
 import net.neoforged.neoforge.common.data.AdvancementProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class NoxernaAdvancements implements AdvancementProvider.AdvancementGenerator {
+    private static final List<ResourceKey<Biome>> NOXERNA_BIOMES = ImmutableList.of(
+            NoxernaBiomes.SURFACE, NoxernaBiomes.NOXUM_DEPTHS, NoxernaBiomes.XENON_GROTTO,
+            NoxernaBiomes.KRYPTON_GROTTO, NoxernaBiomes.AESTUM_WASTES, NoxernaBiomes.ARGON_GROVE,
+            NoxernaBiomes.NEON_GROVE, NoxernaBiomes.INETRA_CRAGS);
+    private static final List<ResourceKey<Biome>> NOBLEPHYTE_BIOMES = ImmutableList.of(
+            NoxernaBiomes.XENON_GROTTO, NoxernaBiomes.KRYPTON_GROTTO,
+            NoxernaBiomes.ARGON_GROVE, NoxernaBiomes.NEON_GROVE);
+
+    protected static Advancement.Builder addBiomes(
+            Advancement.Builder builder, HolderLookup.Provider levelRegistry, ResourceKey<Biome> biome) {
+        HolderGetter<Biome> holderGetter = levelRegistry.lookupOrThrow(Registries.BIOME);
+        builder.addCriterion(biome.toString(),
+                PlayerTrigger.TriggerInstance.located(
+                        LocationPredicate.Builder.inBiome(holderGetter.getOrThrow(biome))));
+        return builder;
+    }
+
     @SuppressWarnings("unused")
     @Override
     public void generate(HolderLookup.Provider registries,
@@ -79,7 +97,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("entered_noxerna",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        ChangeDimensionTrigger.TriggerInstance.changedDimensionTo(NoxernaDimension.DIMENSION_KEY))
                 .save(saver, TheNoxerna.MODID + ":story/enter_noxerna");
         // Exploring the Noxerna storyline
         // Find any of the Noblephyte Biomes
@@ -97,9 +115,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
-                .addCriterion("noble_gas_biomes",
+                .addCriterion("noblephyte_biomes",
                         CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
-                .save(saver, TheNoxerna.MODID + ":story/explore_noble_gas_biomes");
+                .save(saver, TheNoxerna.MODID + ":story/explore_noblephyte_biomes");
         // Reach the Surface
         AdvancementHolder BREACH_SURFACE = Advancement.Builder.advancement()
                 .parent(EXPLORE_NOBLEPHYTE_BIOMES)
@@ -269,7 +287,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder NOXERNA_TOOLS = Advancement.Builder.advancement()
                 .parent(ENTER_NOXERNA)
                 .display(
-                        new ItemStack(Items.STONE_PICKAXE),
+                        new ItemStack(NoxernaItems.NOBLEWOOD_PICKAXE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".noxerna_tools.title"),
                         Component.translatable(
@@ -281,7 +299,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("any_noxerna_pickaxe",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.COMPLETES_NOXERNA_TOOLS_ADVANCEMENT)))
                 .save(saver, TheNoxerna.MODID + ":story/noxerna_tools");
         // have any item in the #noxerna:completes_mine_hard_stone_advancement item tag
         AdvancementHolder MINE_HARD_STONE = Advancement.Builder.advancement()
@@ -491,7 +511,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder SMELT_FERREBRIS = Advancement.Builder.advancement()
                 .parent(MINE_HARD_STONE)
                 .display(
-                        new ItemStack(Items.IRON_INGOT),
+                        new ItemStack(NoxernaItems.FERREBRIS_INGOT.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".smelt_ferrebris.title"),
                         Component.translatable(
@@ -503,7 +523,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("ferrebris_ingot",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS)))
                 .save(saver, TheNoxerna.MODID + ":story/smelt_ferrebris");
         // Obtain every mineral from the Noxerna
         AdvancementHolder MINE_NATIVE_MINERALS = Advancement.Builder.advancement()
@@ -520,8 +542,26 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
+                .requirements(AdvancementRequirements.allOf(List.of(
+                        "mine_native_minerals", "ferrebris", "umburam", "adamuna", "nihoxite")))
                 .addCriterion("mine_native_minerals",
                         CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                .addCriterion("ferrebris",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.FERREBRIS_INGOTS)))
+                .addCriterion("umburam",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.UMBURAM_INGOTS)))
+                .addCriterion("adamuna",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.ADAMUNA_GEMS)))
+                .addCriterion("nihoxite",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.NIHOXITE_INGOTS)))
                 .save(saver, TheNoxerna.MODID + ":story/mine_native_minerals");
         // Switch a Noxerna material to its equivalent vanilla material or vice versa.
         AdvancementHolder ATTUNEMENT_ALCHEMY = Advancement.Builder.advancement()
@@ -653,7 +693,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder FERREBRIS_TOOLS = Advancement.Builder.advancement()
                 .parent(SMELT_FERREBRIS)
                 .display(
-                        new ItemStack(Items.IRON_PICKAXE),
+                        new ItemStack(NoxernaItems.FERREBRIS_PICKAXE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".ferrebris_tools.title"),
                         Component.translatable(
@@ -665,7 +705,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("ferrebris_pickaxe",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaItems.FERREBRIS_PICKAXE.get())))
                 .save(saver, TheNoxerna.MODID + ":story/ferrebris_tools");
         // Adamuna storyline, continuing from "FERREBRIS_TOOLS"
         // Get a Superthermal Meter
@@ -708,7 +750,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder MINE_ADAMUNA = Advancement.Builder.advancement()
                 .parent(FERREBRIS_TOOLS)
                 .display(
-                        new ItemStack(Items.DIAMOND),
+                        new ItemStack(NoxernaItems.ADAMUNA.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".mine_adamuna.title"),
                         Component.translatable(
@@ -720,13 +762,15 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("adamuna",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS)))
                 .save(saver, TheNoxerna.MODID + ":story/mine_adamuna");
         // Give an Adamuna to someone else
         AdvancementHolder GIVE_ADAMUNA = Advancement.Builder.advancement()
                 .parent(MINE_ADAMUNA)
                 .display(
-                        new ItemStack(Items.DIAMOND),
+                        new ItemStack(NoxernaItems.ADAMUNA.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".give_adamuna.title"),
                         Component.translatable(
@@ -799,7 +843,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder REFINE_NIHOXITE = Advancement.Builder.advancement()
                 .parent(MINE_INPERLUM)
                 .display(
-                        new ItemStack(Items.NETHERITE_INGOT),
+                        new ItemStack(NoxernaItems.NIHOXITE_INGOT.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".refine_nihoxite.title"),
                         Component.translatable(
@@ -811,7 +855,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("nihoxite_ingot",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS)))
                 .save(saver, TheNoxerna.MODID + ":story/refine_nihoxite");
         // Make a Nihoxite Hoe, like an idiot...
         AdvancementHolder NIHOXITE_HOE = Advancement.Builder.advancement()

@@ -1,8 +1,48 @@
 {
   "parent": "noxerna:story/smelt_ferrebris",
   "criteria": {
+    "adamuna": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:gems/adamuna"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ferrebris": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ingots/ferrebris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "mine_native_minerals": {
       "trigger": "minecraft:impossible"
+    },
+    "nihoxite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ingots/nihoxite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "umburam": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ingots/umburam"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -21,6 +61,18 @@
   "requirements": [
     [
       "mine_native_minerals"
+    ],
+    [
+      "ferrebris"
+    ],
+    [
+      "umburam"
+    ],
+    [
+      "adamuna"
+    ],
+    [
+      "nihoxite"
     ]
   ],
   "sends_telemetry_event": true

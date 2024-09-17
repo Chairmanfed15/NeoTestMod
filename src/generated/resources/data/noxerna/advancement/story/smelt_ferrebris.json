@@ -2,7 +2,14 @@
   "parent": "noxerna:story/mine_hard_stone",
   "criteria": {
     "ferrebris_ingot": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:ferrebris_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -11,7 +18,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:iron_ingot"
+      "id": "noxerna:ferrebris_ingot"
     },
     "title": {
       "translate": "advancement.noxerna.smelt_ferrebris.title"

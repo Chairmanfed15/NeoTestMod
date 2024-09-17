@@ -1,9 +1,9 @@
 package net.chairmanfed.noxerna.data.providers;
 
+import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -52,6 +52,13 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('#', input)
                 .unlockedBy("has_" + input, has(input));
     }
+    public ShapedRecipeBuilder makeCraftingTable(TagKey<Item> input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+                .pattern("##")
+                .pattern("##")
+                .define('#', input)
+                .unlockedBy("has" + input, has(input));
+    }
     public ShapedRecipeBuilder packing3x3(Item input, ItemLike result) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
                 .pattern("###")
@@ -69,7 +76,31 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('$', tagInput)
                 .unlockedBy("has_" + input, has(input));
     }
+    public ShapedRecipeBuilder makeSticks(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, 4)
+                .pattern("#")
+                .pattern("#")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+
+    // Tool Recipes
+    public ShapedRecipeBuilder makePickaxe(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+                .pattern("###")
+                .pattern(" $ ")
+                .pattern(" $ ")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
+
     // Shapeless Recipes
+    public ShapelessRecipeBuilder makePlanks(TagKey<Item> input, ItemLike result) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result, 4)
+                .requires(input)
+                .unlockedBy("has_" + input, has(input));
+    }
     public ShapelessRecipeBuilder unpacking3x3(Item input, ItemLike result) {
         return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result, 9)
                 .requires(input)

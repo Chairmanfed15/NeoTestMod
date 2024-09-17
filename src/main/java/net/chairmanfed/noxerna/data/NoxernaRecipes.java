@@ -3,11 +3,14 @@ package net.chairmanfed.noxerna.data;
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.providers.NoxernaRecipeProvider;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,6 +24,9 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
     @Override
     protected void buildRecipes (RecipeOutput output) {
         // Building Block Recipes
+        makePlanks(NoxernaTags.ItemTags.XENON_LOGS, NoxernaBlocks.XENON_PLANKS.get().asItem())
+                .group("planks")
+                .save(output, name("crafting/xenon_planks"));
         makeStairs(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_STAIRS.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_stairs"));
@@ -69,6 +75,21 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeWall(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
                 .group("noxum_bricks")
                 .save(output, name("crafting/noxum_brick_wall"));
+
+        // Noblewood Alt Recipes
+        makeCraftingTable(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, Items.CRAFTING_TABLE)
+                .group("crafting_tables")
+                .save(output, name("crafting/noblewood_crafting_table"));
+
+        // Ingredient Recipes
+        makeSticks(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_STICK.get())
+                .group("sticks")
+                .save(output, name("crafting/noblewood_stick"));
+
+        // Tool Recipes
+        makePickaxe(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_PICKAXE.get())
+                .group("noblewood_tools")
+                .save(output, name("crafting/noblewood_pickaxe"));
 
         // Stonecutting Recipes
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM.get().asItem())

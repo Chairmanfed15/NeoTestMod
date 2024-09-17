@@ -2,7 +2,14 @@
   "parent": "noxerna:story/ferrebris_tools",
   "criteria": {
     "adamuna": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:adamuna_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -11,7 +18,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:diamond"
+      "id": "noxerna:adamuna"
     },
     "title": {
       "translate": "advancement.noxerna.mine_adamuna.title"

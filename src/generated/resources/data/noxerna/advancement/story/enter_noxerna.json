@@ -2,7 +2,10 @@
   "parent": "noxerna:story/find_abandoned_portal",
   "criteria": {
     "entered_noxerna": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "to": "noxerna:the_noxerna"
+      },
+      "trigger": "minecraft:changed_dimension"
     }
   },
   "display": {

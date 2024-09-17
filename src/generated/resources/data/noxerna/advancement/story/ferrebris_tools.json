@@ -2,7 +2,14 @@
   "parent": "noxerna:story/smelt_ferrebris",
   "criteria": {
     "ferrebris_pickaxe": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:ferrebris_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -11,7 +18,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:iron_pickaxe"
+      "id": "noxerna:ferrebris_pickaxe"
     },
     "title": {
       "translate": "advancement.noxerna.ferrebris_tools.title"

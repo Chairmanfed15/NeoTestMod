@@ -31,6 +31,7 @@ public class DataGenerators {
 
         // Assets
         generator.addProvider(client, new NoxernaBlockStateProvider(output, existingFileHelper));
+        generator.addProvider(client, new NoxernaItemModels(output, existingFileHelper));
         generator.addProvider(client, new NoxernaLanguageProvider(output, existingFileHelper));
 
         // Data

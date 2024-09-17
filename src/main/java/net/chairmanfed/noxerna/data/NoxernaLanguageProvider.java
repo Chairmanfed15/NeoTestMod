@@ -2,16 +2,11 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.data.PackOutput;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.LanguageProvider;
-
-import java.util.function.Supplier;
 
 public class NoxernaLanguageProvider extends LanguageProvider {
     public NoxernaLanguageProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -26,6 +21,7 @@ public class NoxernaLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup." + TheNoxerna.MODID + ".building_blocks", "Noxerna Building Blocks");
+        add("itemGroup." + TheNoxerna.MODID + ".natural_blocks", "Noxerna Natural Blocks");
         add("gamerule.maxQuakeMagnitude", "Maximum Quake Magnitude");
 
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
@@ -33,6 +29,7 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addBlock(NoxernaBlocks.NOXUM_BRICK_STAIRS, "Noxum Brick Stairs");
         addBlock(NoxernaBlocks.NOXUM_BRICK_SLAB, "Noxum Brick Slab");
         addBlock(NoxernaBlocks.NOXUM_BRICK_WALL, "Noxum Brick Wall");
+        addBlock(NoxernaBlocks.NOXUM_BUTTON, "Noxum Button");
         addBlock(NoxernaBlocks.NOXUM_PEBBLE, "Noxum Pebble");
         addBlock(NoxernaBlocks.NOXUM_PRESSURE_PLATE, "Noxum Pressure Plate");
         addBlock(NoxernaBlocks.NOXUM_STAIRS, "Noxum Stairs");
@@ -44,17 +41,46 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addBlock(NoxernaBlocks.POLISHED_NOXUM_SLAB, "Polished Noxum Slab");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_WALL, "Polished Noxum Wall");
 
+        addBlock(NoxernaBlocks.STRIPPED_XENON_LOG, "Stripped Xenon Log");
+        addBlock(NoxernaBlocks.STRIPPED_XENON_WOOD, "Stripped Xenon Wood");
+
         addBlock(NoxernaBlocks.VOIDROCK, "Voidrock");
+
+        addBlock(NoxernaBlocks.XENON_LOG, "Xenon Log");
+        addBlock(NoxernaBlocks.XENON_PLANKS, "Xenon Planks");
+        addBlock(NoxernaBlocks.XENON_STAIRS, "Xenon Stairs");
+        addBlock(NoxernaBlocks.XENON_WOOD, "Xenon Wood");
+
+        addItem(NoxernaItems.ADAMUNA, "Adamuna");
+        addItem(NoxernaItems.FERREBRIS_INGOT, "Ferrebris Ingot");
+        addItem(NoxernaItems.UMBURAM_INGOT, "Umburam Ingot");
+        addItem(NoxernaItems.NIHOXITE_INGOT, "Nihoxite Ingot");
+        addItem(NoxernaItems.NOBLEWOOD_STICK, "Noblewood Stick");
+
+        addItem(NoxernaItems.NOBLEWOOD_AXE, "Noblewood Axe");
+        addItem(NoxernaItems.NOBLEWOOD_HOE, "Noblewood Hoe");
+        addItem(NoxernaItems.NOBLEWOOD_PICKAXE, "Noblewood Pickaxe");
+        addItem(NoxernaItems.NOBLEWOOD_SHOVEL, "Noblewood Shovel");
+        addItem(NoxernaItems.NOBLEWOOD_SWORD, "Noblewood Sword");
+        addItem(NoxernaItems.NOXSTONE_PICKAXE, "Noxstone Pickaxe");
+        addItem(NoxernaItems.FERREBRIS_PICKAXE, "Ferrebris Pickaxe");
+        addItem(NoxernaItems.UMBURAM_PICKAXE, "Umburam Pickaxe");
+        addItem(NoxernaItems.ADAMUNA_PICKAXE, "Adamuna Pickaxe");
+        addItem(NoxernaItems.NIHOXITE_PICKAXE, "Nihoxite Pickaxe");
 
         add(NoxernaTags.BlockTags.BOSS_IMMUNE, "Bosses Cannot Destroy");
         add(NoxernaTags.BlockTags.INFINIBURN_NOXERNA, "Burns Forever in Noxerna");
         add(NoxernaTags.BlockTags.PEBBLES, "Pebbles");
         add(NoxernaTags.BlockTags.QUAKE_IMMUNE, "Immune to Quakes");
+        add(NoxernaTags.BlockTags.XENON_LOGS, "Xenon Logs");
 
         add(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT, "Completes Hard Shadowy Rock");
+        add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, "Noblewood Planks");
         add(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, "Any Noxum Stone");
         add(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, "Noxstone Tool Materials");
         add(NoxernaTags.ItemTags.PEBBLES, "Pebbles");
+        add(NoxernaTags.ItemTags.XENON_LOGS, "Xenon Logs");
+
 
         // Root + Enter Noxerna Storyline
         addAdvancement("root", "Noxerna", "Bring a Torch or 64");

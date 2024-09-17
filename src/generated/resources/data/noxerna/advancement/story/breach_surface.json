@@ -1,5 +1,5 @@
 {
-  "parent": "noxerna:story/explore_noble_gas_biomes",
+  "parent": "noxerna:story/explore_noblephyte_biomes",
   "criteria": {
     "breach_surface": {
       "trigger": "minecraft:impossible"
