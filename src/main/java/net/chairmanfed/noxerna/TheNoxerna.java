@@ -46,75 +46,10 @@ public class TheNoxerna
         NoxernaBlocks.BLOCKS.register(modEventBus);
         NoxernaItems.ITEMS.register(modEventBus);
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
-        modEventBus.addListener(this::buildContents);
+        modEventBus.addListener(NoxernaCreativeModeTabs::buildContents);
         // modEventBus.addListener(DataGenerators::gatherData);
         NeoForge.EVENT_BUS.register(this);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    public void buildContents(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(NoxernaBlocks.XENON_LOG.get());
-            event.accept(NoxernaBlocks.XENON_WOOD.get());
-            event.accept(NoxernaBlocks.STRIPPED_XENON_LOG.get());
-            event.accept(NoxernaBlocks.STRIPPED_XENON_WOOD.get());
-            event.accept(NoxernaBlocks.XENON_PLANKS.get());
-            event.accept(NoxernaBlocks.XENON_STAIRS.get());
-            event.accept(NoxernaBlocks.NOXUM.get());
-            event.accept(NoxernaBlocks.NOXUM_STAIRS.get());
-            event.accept(NoxernaBlocks.NOXUM_SLAB.get());
-            event.accept(NoxernaBlocks.NOXUM_WALL.get());
-            event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
-            event.accept(NoxernaBlocks.NOXUM_BUTTON.get());
-            event.accept(NoxernaBlocks.POLISHED_NOXUM.get());
-            event.accept(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
-            event.accept(NoxernaBlocks.POLISHED_NOXUM_SLAB.get());
-            event.accept(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
-            event.accept(NoxernaBlocks.NOXUM_BRICKS.get());
-            event.accept(NoxernaBlocks.NOXUM_BRICK_STAIRS.get());
-            event.accept(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
-            event.accept(NoxernaBlocks.NOXUM_BRICK_WALL.get());
-        }
-        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(NoxernaBlocks.NOXUM.get());
-            event.accept(NoxernaBlocks.NOXUM_PEBBLE.get());
-            event.accept(NoxernaBlocks.XENON_LOG.get());
-            event.accept(NoxernaBlocks.VOIDROCK.get());
-        }
-        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
-            event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
-            event.accept(NoxernaBlocks.NOXUM_BUTTON.get());
-        }
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(NoxernaItems.NOBLEWOOD_SHOVEL.get());
-            event.accept(NoxernaItems.NOBLEWOOD_PICKAXE.get());
-            event.accept(NoxernaItems.NOBLEWOOD_AXE.get());
-            event.accept(NoxernaItems.NOBLEWOOD_HOE.get());
-            event.accept(NoxernaItems.NOXSTONE_PICKAXE.get());
-            event.accept(NoxernaItems.FERREBRIS_PICKAXE.get());
-            event.accept(NoxernaItems.UMBURAM_PICKAXE.get());
-            event.accept(NoxernaItems.ADAMUNA_PICKAXE.get());
-            event.accept(NoxernaItems.NIHOXITE_PICKAXE.get());
-        }
-        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(NoxernaItems.NOBLEWOOD_SWORD.get());
-            event.accept(NoxernaItems.NOBLEWOOD_AXE.get());
-        }
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(NoxernaItems.RAW_FERREBRIS.get());
-            event.accept(NoxernaItems.RAW_OBSCUPRUM.get());
-            event.accept(NoxernaItems.RAW_UMBURAM.get());
-            event.accept(NoxernaItems.RAW_INPERLUM.get());
-            event.accept(NoxernaItems.TENERYL.get());
-            event.accept(NoxernaItems.ADAMUNA.get());
-            event.accept(NoxernaItems.VITRAGOR.get());
-            event.accept(NoxernaItems.FERREBRIS_INGOT.get());
-            event.accept(NoxernaItems.OBSCUPRUM_INGOT.get());
-            event.accept(NoxernaItems.UMBURAM_INGOT.get());
-            event.accept(NoxernaItems.INPERLUM_INGOT.get());
-            event.accept(NoxernaItems.NIHOXITE_INGOT.get());
-            event.accept(NoxernaItems.NOBLEWOOD_STICK.get());
-        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

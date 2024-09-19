@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "noblewood_tools",
+  "key": {
+    "#": {
+      "tag": "noxerna:noblewood_planks"
+    },
+    "$": {
+      "tag": "c:rods/noblewood"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    " $ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:noblewood_sword"
+  }
+}

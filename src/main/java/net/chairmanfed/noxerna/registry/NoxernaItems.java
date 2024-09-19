@@ -1,6 +1,7 @@
 package net.chairmanfed.noxerna.registry;
 
 import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.item.NoxernaSmithingTemplateItem;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -45,6 +46,8 @@ public class NoxernaItems {
             "nihoxite_ingot", new Item.Properties());
     public static final Supplier<Item> NOBLEWOOD_STICK = registerSimpleItem(
             "noblewood_stick", new Item.Properties());
+    public static final Supplier<Item> NIHOXITE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
+            "nihoxite_upgrade_smithing_template", () -> NoxernaSmithingTemplateItem.createNihoxiteUpgradeTemplate());
 
     // Tools, sorted by tier
     // Noblewood
@@ -55,7 +58,7 @@ public class NoxernaItems {
     public static final Supplier<Item> NOBLEWOOD_HOE = ITEMS.register(
             "noblewood_hoe", () -> new HoeItem(NoxernaToolMaterials.NOBLEWOOD,
                     new Item.Properties().attributes(HoeItem.createAttributes(
-                            NoxernaToolMaterials.NOBLEWOOD, 1, -3.2f))));
+                            NoxernaToolMaterials.NOBLEWOOD, 1, -2.0f))));
     public static final Supplier<Item> NOBLEWOOD_PICKAXE = ITEMS.register(
             "noblewood_pickaxe", () -> new PickaxeItem(NoxernaToolMaterials.NOBLEWOOD,
                     new Item.Properties().attributes(PickaxeItem.createAttributes(
@@ -69,30 +72,110 @@ public class NoxernaItems {
                     new Item.Properties().attributes(SwordItem.createAttributes(
                             NoxernaToolMaterials.NOBLEWOOD, 2, -2.8f))));
     // Noxstone
+    public static final Supplier<Item> NOXSTONE_AXE = ITEMS.register(
+            "noxstone_axe", () -> new AxeItem(NoxernaToolMaterials.NOXSTONE,
+                    new Item.Properties().attributes(AxeItem.createAttributes(
+                            NoxernaToolMaterials.NOXSTONE, 4.5f, -3.2f))));
+    public static final Supplier<Item> NOXSTONE_HOE = ITEMS.register(
+            "noxstone_hoe", () -> new HoeItem(NoxernaToolMaterials.NOXSTONE,
+                    new Item.Properties().attributes(HoeItem.createAttributes(
+                            NoxernaToolMaterials.NOXSTONE, 1, -2.0f))));
     public static final Supplier<Item> NOXSTONE_PICKAXE = ITEMS.register(
             "noxstone_pickaxe", () -> new PickaxeItem(NoxernaToolMaterials.NOXSTONE,
                     new Item.Properties().attributes(PickaxeItem.createAttributes(
                             NoxernaToolMaterials.NOXSTONE, 1, -3.2f))));
+    public static final Supplier<Item> NOXSTONE_SHOVEL = ITEMS.register(
+            "noxstone_shovel", () -> new ShovelItem(NoxernaToolMaterials.NOXSTONE,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(
+                            NoxernaToolMaterials.NOXSTONE, 1.5f, -3.2f))));
+    public static final Supplier<Item> NOXSTONE_SWORD = ITEMS.register(
+            "noxstone_sword", () -> new SwordItem(NoxernaToolMaterials.NOXSTONE,
+                    new Item.Properties().attributes(SwordItem.createAttributes(
+                            NoxernaToolMaterials.NOXSTONE, 3, -2.8f))));
     // Ferrebris
+    public static final Supplier<Item> FERREBRIS_AXE = ITEMS.register(
+            "ferrebris_axe", () -> new AxeItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties().attributes(AxeItem.createAttributes(
+                            NoxernaToolMaterials.FERREBRIS, 5.5f, -3.2f))));
+    public static final Supplier<Item> FERREBRIS_HOE = ITEMS.register(
+            "ferrebris_hoe", () -> new HoeItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties().attributes(HoeItem.createAttributes(
+                            NoxernaToolMaterials.FERREBRIS, 0, -2.0f))));
     public static final Supplier<Item> FERREBRIS_PICKAXE = ITEMS.register(
             "ferrebris_pickaxe", () -> new PickaxeItem(NoxernaToolMaterials.FERREBRIS,
                     new Item.Properties().attributes(PickaxeItem.createAttributes(
                             NoxernaToolMaterials.FERREBRIS, 1, -3.2f))));
+    public static final Supplier<Item> FERREBRIS_SHOVEL = ITEMS.register(
+            "ferrebris_shovel", () -> new ShovelItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(
+                            NoxernaToolMaterials.FERREBRIS, 1.5f, -3.2f))));
+    public static final Supplier<Item> FERREBRIS_SWORD = ITEMS.register(
+            "ferrebris_sword", () -> new SwordItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties().attributes(SwordItem.createAttributes(
+                            NoxernaToolMaterials.FERREBRIS, 3, -2.8f))));
     // Umburam
+    public static final Supplier<Item> UMBURAM_AXE = ITEMS.register(
+            "umburam_axe", () -> new AxeItem(NoxernaToolMaterials.UMBURAM,
+                    new Item.Properties().attributes(AxeItem.createAttributes(
+                            NoxernaToolMaterials.UMBURAM, 4.5f, -3.2f))));
+    public static final Supplier<Item> UMBURAM_HOE = ITEMS.register(
+            "umburam_hoe", () -> new HoeItem(NoxernaToolMaterials.UMBURAM,
+                    new Item.Properties().attributes(HoeItem.createAttributes(
+                            NoxernaToolMaterials.UMBURAM, 0, -2.0f))));
     public static final Supplier<Item> UMBURAM_PICKAXE = ITEMS.register(
             "umburam_pickaxe", () -> new PickaxeItem(NoxernaToolMaterials.UMBURAM,
                     new Item.Properties().attributes(PickaxeItem.createAttributes(
                             NoxernaToolMaterials.UMBURAM, 1, -3.2f))));
+    public static final Supplier<Item> UMBURAM_SHOVEL = ITEMS.register(
+            "umburam_shovel", () -> new ShovelItem(NoxernaToolMaterials.UMBURAM,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(
+                            NoxernaToolMaterials.UMBURAM, 1.5f, -3.2f))));
+    public static final Supplier<Item> UMBURAM_SWORD = ITEMS.register(
+            "umburam_sword", () -> new SwordItem(NoxernaToolMaterials.UMBURAM,
+                    new Item.Properties().attributes(SwordItem.createAttributes(
+                            NoxernaToolMaterials.UMBURAM, 2, -2.8f))));
     // Adamuna
+    public static final Supplier<Item> ADAMUNA_AXE = ITEMS.register(
+            "adamuna_axe", () -> new AxeItem(NoxernaToolMaterials.ADAMUNA,
+                    new Item.Properties().attributes(AxeItem.createAttributes(
+                            NoxernaToolMaterials.ADAMUNA, 5.5f, -3.2f))));
+    public static final Supplier<Item> ADAMUNA_HOE = ITEMS.register(
+            "adamuna_hoe", () -> new HoeItem(NoxernaToolMaterials.ADAMUNA,
+                    new Item.Properties().attributes(HoeItem.createAttributes(
+                            NoxernaToolMaterials.ADAMUNA, 0, -2.0f))));
     public static final Supplier<Item> ADAMUNA_PICKAXE = ITEMS.register(
             "adamuna_pickaxe", () -> new PickaxeItem(NoxernaToolMaterials.ADAMUNA,
                     new Item.Properties().attributes(PickaxeItem.createAttributes(
                             NoxernaToolMaterials.ADAMUNA, 1, -3.2f))));
+    public static final Supplier<Item> ADAMUNA_SHOVEL = ITEMS.register(
+            "adamuna_shovel", () -> new ShovelItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(
+                            NoxernaToolMaterials.ADAMUNA, 1.5f, -3.2f))));
+    public static final Supplier<Item> ADAMUNA_SWORD = ITEMS.register(
+            "adamuna_sword", () -> new SwordItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties().attributes(SwordItem.createAttributes(
+                            NoxernaToolMaterials.ADAMUNA, 3, -2.8f))));
     // Nihoxite
+    public static final Supplier<Item> NIHOXITE_AXE = ITEMS.register(
+            "nihoxite_axe", () -> new AxeItem(NoxernaToolMaterials.NIHOXITE,
+                    new Item.Properties().attributes(AxeItem.createAttributes(
+                            NoxernaToolMaterials.NIHOXITE, 5.5f, -3.2f))));
+    public static final Supplier<Item> NIHOXITE_HOE = ITEMS.register(
+            "nihoxite_hoe", () -> new HoeItem(NoxernaToolMaterials.NIHOXITE,
+                    new Item.Properties().attributes(HoeItem.createAttributes(
+                            NoxernaToolMaterials.NIHOXITE, 0, -2.0f))));
     public static final Supplier<Item> NIHOXITE_PICKAXE = ITEMS.register(
             "nihoxite_pickaxe", () -> new PickaxeItem(NoxernaToolMaterials.NIHOXITE,
                     new Item.Properties().attributes(PickaxeItem.createAttributes(
                             NoxernaToolMaterials.NIHOXITE, 1, -3.2f))));
+    public static final Supplier<Item> NIHOXITE_SHOVEL = ITEMS.register(
+            "nihoxite_shovel", () -> new ShovelItem(NoxernaToolMaterials.NIHOXITE,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(
+                            NoxernaToolMaterials.NIHOXITE, 1.5f, -3.2f))));
+    public static final Supplier<Item> NIHOXITE_SWORD = ITEMS.register(
+            "nihoxite_sword", () -> new SwordItem(NoxernaToolMaterials.NIHOXITE,
+                    new Item.Properties().attributes(SwordItem.createAttributes(
+                            NoxernaToolMaterials.NIHOXITE, 3, -2.8f))));
 
     // Block Items
     public static final Supplier<Item> XENON_LOG = registerBlockItem(

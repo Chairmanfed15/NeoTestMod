@@ -2,7 +2,14 @@
   "parent": "noxerna:story/mine_adamuna",
   "criteria": {
     "raw_inperlum": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:raw_materials/inperlum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -12,7 +19,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "minecraft:netherite_scrap"
+      "id": "noxerna:raw_inperlum"
     },
     "title": {
       "translate": "advancement.noxerna.mine_inperlum.title"

@@ -338,8 +338,30 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
+                .requirements(AdvancementRequirements.allOf(List.of(
+                        "all_stone_variants", "noxum", "noxum_stairs", "noxum_slab", "noxum_wall",
+                        "noxum_pressure_plate", "noxum_button", "noxum_pebble")))
                 .addCriterion("all_stone_variants",
                         CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                .addCriterion("noxum", InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM.get().asItem())))
+                .addCriterion("noxum_stairs", InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_STAIRS.get().asItem())))
+                .addCriterion("noxum_slab",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_SLAB.get().asItem())))
+                .addCriterion("noxum_wall",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_WALL.get().asItem())))
+                .addCriterion("noxum_pressure_plate",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get().asItem())))
+                .addCriterion("noxum_button",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_BUTTON.get().asItem())))
+                .addCriterion("noxum_pebble",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_PEBBLE.get().asItem())))
                 .save(saver, TheNoxerna.MODID + ":story/all_stone_variants");
         // Experience a quake while in the Noxerna
         AdvancementHolder NOXQUAKE = Advancement.Builder.advancement()
@@ -525,7 +547,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .addCriterion("ferrebris_ingot",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
                                 ItemPredicate.Builder.item().of(
-                                        NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS)))
+                                        NoxernaTags.ItemTags.FERREBRIS_INGOTS)))
                 .save(saver, TheNoxerna.MODID + ":story/smelt_ferrebris");
         // Obtain every mineral from the Noxerna
         AdvancementHolder MINE_NATIVE_MINERALS = Advancement.Builder.advancement()
@@ -825,7 +847,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder MINE_INPERLUM = Advancement.Builder.advancement()
                 .parent(MINE_ADAMUNA)
                 .display(
-                        new ItemStack(Items.NETHERITE_SCRAP),
+                        new ItemStack(NoxernaItems.RAW_INPERLUM.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".mine_inperlum.title"),
                         Component.translatable(
@@ -837,7 +859,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("raw_inperlum",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaTags.ItemTags.RAW_INPERLUM_MATERIALS)))
                 .save(saver, TheNoxerna.MODID + ":story/mine_inperlum");
         // Combine Inperlum & Ferrebris with liquid void
         AdvancementHolder REFINE_NIHOXITE = Advancement.Builder.advancement()
@@ -857,13 +881,13 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .addCriterion("nihoxite_ingot",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
                                 ItemPredicate.Builder.item().of(
-                                        NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS)))
+                                        NoxernaTags.ItemTags.NIHOXITE_INGOTS)))
                 .save(saver, TheNoxerna.MODID + ":story/refine_nihoxite");
         // Make a Nihoxite Hoe, like an idiot...
         AdvancementHolder NIHOXITE_HOE = Advancement.Builder.advancement()
                 .parent(REFINE_NIHOXITE)
                 .display(
-                        new ItemStack(Items.NETHERITE_HOE),
+                        new ItemStack(NoxernaItems.NIHOXITE_HOE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".nihoxite_hoe.title"),
                         Component.translatable(
@@ -875,7 +899,8 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("nihoxite_hoe",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.NIHOXITE_HOE.get())))
                 .save(saver, TheNoxerna.MODID + ":story/nihoxite_hoe");
         // Have a full set of Nihoxite armour
         AdvancementHolder NIHOXITE_ARMOR = Advancement.Builder.advancement()

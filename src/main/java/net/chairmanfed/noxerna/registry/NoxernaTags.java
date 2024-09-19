@@ -25,6 +25,12 @@ public class NoxernaTags {
         public static final TagKey<Item> PEBBLES = localTag("pebbles");
         public static final TagKey<Item> XENON_LOGS = localTag("xenon_logs");
 
+        public static final TagKey<Item> RAW_FERREBRIS_MATERIALS = commonTag("raw_materials/ferrebris");
+        public static final TagKey<Item> RAW_OBSCUPRUM_MATERIALS = commonTag("raw_materials/obscuprum");
+        public static final TagKey<Item> RAW_UMBURAM_MATERIALS = commonTag("raw_materials/umburam");
+        public static final TagKey<Item> RAW_INPERLUM_MATERIALS = commonTag("raw_materials/inperlum");
+        public static final TagKey<Item> RAW_MATERIALS = commonTag("raw_materials");
+
         public static final TagKey<Item> ADAMUNA_GEMS = commonTag("gems/adamuna");
         public static final TagKey<Item> GEMS = commonTag("gems");
         public static final TagKey<Item> FERREBRIS_INGOTS = commonTag("ingots/ferrebris");

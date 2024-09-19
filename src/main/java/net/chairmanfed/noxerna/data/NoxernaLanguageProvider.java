@@ -18,10 +18,25 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         this.add("advancement." + TheNoxerna.MODID + "." + id + ".description", description);
     }
 
+    protected void addUpgradeTemplate(String upgradeType, String name, String ingredients, String appliedTo) {
+        this.add("upgrade." + TheNoxerna.MODID + "." + upgradeType, name);
+        this.add("item." + TheNoxerna.MODID + ".smithing_template."
+                + upgradeType + ".ingredients", ingredients);
+        this.add("item." + TheNoxerna.MODID + ".smithing_template."
+                + upgradeType + ".applies_to", appliedTo);
+        this.add("item." + TheNoxerna.MODID + ".smithing_template."
+                + upgradeType + ".additions_slot_description", "Add " + ingredients);
+        this.add("item." + TheNoxerna.MODID + ".smithing_template."
+                + upgradeType + ".base_slot_description", "Add " + appliedTo);
+    }
+
     @Override
     protected void addTranslations() {
         add("itemGroup." + TheNoxerna.MODID + ".building_blocks", "Noxerna Building Blocks");
         add("itemGroup." + TheNoxerna.MODID + ".natural_blocks", "Noxerna Natural Blocks");
+        add("itemGroup." + TheNoxerna.MODID + ".tools_and_utilities", "Noxerna Tools & Utilities");
+        add("itemGroup." + TheNoxerna.MODID + ".combat", "Noxerna Combat");
+        add("itemGroup." + TheNoxerna.MODID + ".ingredients", "Noxerna Ingredients");
         add("gamerule.maxQuakeMagnitude", "Maximum Quake Magnitude");
 
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
@@ -51,19 +66,41 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addBlock(NoxernaBlocks.XENON_STAIRS, "Xenon Stairs");
         addBlock(NoxernaBlocks.XENON_WOOD, "Xenon Wood");
 
+        addItem(NoxernaItems.RAW_FERREBRIS, "Raw Ferrebris");
+        addItem(NoxernaItems.RAW_OBSCUPRUM, "Raw Obscuprum");
+        addItem(NoxernaItems.RAW_UMBURAM, "Raw Umburam");
+        addItem(NoxernaItems.RAW_INPERLUM, "Raw Inperlum");
+        addItem(NoxernaItems.TENERYL, "Teneryl");
         addItem(NoxernaItems.ADAMUNA, "Adamuna");
+        addItem(NoxernaItems.VITRAGOR, "Vitragor");
         addItem(NoxernaItems.FERREBRIS_INGOT, "Ferrebris Ingot");
+        addItem(NoxernaItems.OBSCUPRUM_INGOT, "Obscuprum Ingot");
         addItem(NoxernaItems.UMBURAM_INGOT, "Umburam Ingot");
+        addItem(NoxernaItems.INPERLUM_INGOT, "Inperlum Ingot");
         addItem(NoxernaItems.NIHOXITE_INGOT, "Nihoxite Ingot");
         addItem(NoxernaItems.NOBLEWOOD_STICK, "Noblewood Stick");
+        addItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
+        addUpgradeTemplate("nihoxite_upgrade", "Nihoxite Upgrade",
+                "Nihoxite Ingot", "Adamuna Equipment");
 
         addItem(NoxernaItems.NOBLEWOOD_AXE, "Noblewood Axe");
         addItem(NoxernaItems.NOBLEWOOD_HOE, "Noblewood Hoe");
         addItem(NoxernaItems.NOBLEWOOD_PICKAXE, "Noblewood Pickaxe");
         addItem(NoxernaItems.NOBLEWOOD_SHOVEL, "Noblewood Shovel");
         addItem(NoxernaItems.NOBLEWOOD_SWORD, "Noblewood Sword");
+
+        addItem(NoxernaItems.NOXSTONE_AXE, "Noxstone Axe");
+        addItem(NoxernaItems.NOXSTONE_HOE, "Noxstone Hoe");
         addItem(NoxernaItems.NOXSTONE_PICKAXE, "Noxstone Pickaxe");
+        addItem(NoxernaItems.NOXSTONE_SHOVEL, "Noxstone Shovel");
+        addItem(NoxernaItems.NOXSTONE_SWORD, "Noxstone Sword");
+
+        addItem(NoxernaItems.FERREBRIS_AXE, "Ferrebris Axe");
+        addItem(NoxernaItems.FERREBRIS_HOE, "Ferrebris Hoe");
         addItem(NoxernaItems.FERREBRIS_PICKAXE, "Ferrebris Pickaxe");
+        addItem(NoxernaItems.FERREBRIS_SHOVEL, "Ferrebris Shovel");
+        addItem(NoxernaItems.FERREBRIS_SWORD, "Ferrebris Sword");
+
         addItem(NoxernaItems.UMBURAM_PICKAXE, "Umburam Pickaxe");
         addItem(NoxernaItems.ADAMUNA_PICKAXE, "Adamuna Pickaxe");
         addItem(NoxernaItems.NIHOXITE_PICKAXE, "Nihoxite Pickaxe");

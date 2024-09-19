@@ -3,6 +3,76 @@
   "criteria": {
     "all_stone_variants": {
       "trigger": "minecraft:impossible"
+    },
+    "noxum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_button": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_button"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_pebble": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_pebble"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_pressure_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_pressure_plate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_wall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -21,6 +91,27 @@
   "requirements": [
     [
       "all_stone_variants"
+    ],
+    [
+      "noxum"
+    ],
+    [
+      "noxum_stairs"
+    ],
+    [
+      "noxum_slab"
+    ],
+    [
+      "noxum_wall"
+    ],
+    [
+      "noxum_pressure_plate"
+    ],
+    [
+      "noxum_button"
+    ],
+    [
+      "noxum_pebble"
     ]
   ],
   "sends_telemetry_event": true

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#noxerna:ferrebris_tool_materials"
+            "items": "#c:ingots/ferrebris"
           }
         ]
       },

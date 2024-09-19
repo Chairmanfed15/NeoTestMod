@@ -1,11 +1,13 @@
 package net.chairmanfed.noxerna.data.providers;
 
+import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
@@ -85,10 +87,46 @@ public class NoxernaRecipeProvider extends RecipeProvider {
     }
 
     // Tool Recipes
+    public ShapedRecipeBuilder makeAxe(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .pattern("## ")
+                .pattern("#$ ")
+                .pattern(" $ ")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeHoe(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .pattern("## ")
+                .pattern(" $ ")
+                .pattern(" $ ")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
     public ShapedRecipeBuilder makePickaxe(TagKey<Item> input, Item result) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
                 .pattern("###")
                 .pattern(" $ ")
+                .pattern(" $ ")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeShovel(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .pattern(" # ")
+                .pattern(" $ ")
+                .pattern(" $ ")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeSword(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
+                .pattern(" # ")
+                .pattern(" # ")
                 .pattern(" $ ")
                 .define('#', input)
                 .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
@@ -106,6 +144,25 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .requires(input)
                 .unlockedBy("has_" + input, has(input));
     }
+
+    // Smithing Recipes
+    public SmithingTransformRecipeBuilder nihoxiteUpgrade(Item base, Item result) {
+        return SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get()),
+                Ingredient.of(base),
+                Ingredient.of(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS),
+                RecipeCategory.TOOLS, result)
+                .unlocks("has_nihoxite", has(NoxernaItems.NIHOXITE_INGOT.get()));
+    }
+    public SmithingTransformRecipeBuilder netheriteUpgrade(Item base, Item result) {
+        return SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(base),
+                        Ingredient.of(Items.NETHERITE_INGOT),
+                        RecipeCategory.TOOLS, result)
+                .unlocks("has_netherite", has(Items.NETHERITE_INGOT));
+    }
+
     // Stonecutter Recipes
     public SingleItemRecipeBuilder stonecutting(TagKey<Item> input, ItemLike result) {
         return SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, result)

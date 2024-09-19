@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#noxerna:nihoxite_tool_materials"
+            "items": "#c:ingots/nihoxite"
           }
         ]
       },

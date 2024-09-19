@@ -2,7 +2,14 @@
   "parent": "noxerna:story/refine_nihoxite",
   "criteria": {
     "nihoxite_hoe": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:nihoxite_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -12,7 +19,7 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:netherite_hoe"
+      "id": "noxerna:nihoxite_hoe"
     },
     "title": {
       "translate": "advancement.noxerna.nihoxite_hoe.title"

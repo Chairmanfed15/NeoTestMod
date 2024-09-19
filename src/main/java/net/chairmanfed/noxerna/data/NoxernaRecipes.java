@@ -87,9 +87,42 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("crafting/noblewood_stick"));
 
         // Tool Recipes
+        makeAxe(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_AXE.get())
+                .group("noblewood_tools")
+                .save(output, name("crafting/noblewood_axe"));
+        makeHoe(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_HOE.get())
+                .group("noblewood_tools")
+                .save(output, name("crafting/noblewood_hoe"));
         makePickaxe(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_PICKAXE.get())
                 .group("noblewood_tools")
                 .save(output, name("crafting/noblewood_pickaxe"));
+        makeShovel(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_SHOVEL.get())
+                .group("noblewood_tools")
+                .save(output, name("crafting/noblewood_shovel"));
+        makeSword(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_SWORD.get())
+                .group("noblewood_tools")
+                .save(output, name("crafting/noblewood_sword"));
+        makeAxe(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_AXE.get())
+                .group("noxstone_tools")
+                .save(output, name("crafting/noxstone_axe"));
+        makePickaxe(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_PICKAXE.get())
+                .group("noxstone_tools")
+                .save(output, name("crafting/noxstone_pickaxe"));
+        makePickaxe(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, NoxernaItems.FERREBRIS_PICKAXE.get())
+                .group("ferrebris_tools")
+                .save(output, name("crafting/ferrebris_pickaxe"));
+        makePickaxe(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, NoxernaItems.UMBURAM_PICKAXE.get())
+                .group("umburam_tools")
+                .save(output, name("crafting/umburam_pickaxe"));
+        makePickaxe(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_PICKAXE.get())
+                .group("adamuna_tools")
+                .save(output, name("crafting/adamuna_pickaxe"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_PICKAXE.get(), NoxernaItems.NIHOXITE_PICKAXE.get())
+                .save(output, name("smithing/nihoxite_pickaxe"));
+        nihoxiteUpgrade(Items.DIAMOND_PICKAXE, NoxernaItems.NIHOXITE_PICKAXE.get())
+                .save(output, name("smithing/diamond_nihoxite_pickaxe"));
+        netheriteUpgrade(NoxernaItems.ADAMUNA_PICKAXE.get(), Items.NETHERITE_PICKAXE)
+                .save(output, name("smithing/adamuna_netherite_pickaxe"));
 
         // Stonecutting Recipes
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM.get().asItem())
