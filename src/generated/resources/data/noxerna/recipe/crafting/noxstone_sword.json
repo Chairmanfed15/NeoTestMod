@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "noxstone_tools",
+  "key": {
+    "#": {
+      "tag": "noxerna:noxstone_tool_materials"
+    },
+    "$": {
+      "tag": "c:rods/noblewood"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    " $ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:noxstone_sword"
+  }
+}

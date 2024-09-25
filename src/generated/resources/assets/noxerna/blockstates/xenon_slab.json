@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/xenon_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/xenon_planks"
+    },
+    "type=top": {
+      "model": "noxerna:block/xenon_slab_top"
+    }
+  }
+}

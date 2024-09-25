@@ -22,10 +22,17 @@ public class NoxernaItemTags extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.Provider lookupProvider) {
-        this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
-        this.copy(BlockTags.SLABS, ItemTags.SLABS);
-        this.copy(BlockTags.WALLS, ItemTags.WALLS);
         this.copy(BlockTags.LOGS, ItemTags.LOGS);
+        this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
+        this.copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
+        this.copy(BlockTags.SLABS, ItemTags.SLABS);
+        this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+        this.copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
+        this.copy(BlockTags.WALLS, ItemTags.WALLS);
+        this.copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
+        this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+        this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+        this.copy(BlockTags.STONE_BUTTONS, ItemTags.STONE_BUTTONS);
         tag(ItemTags.AXES)
                 .add(NoxernaItems.NOBLEWOOD_AXE.get()).add(NoxernaItems.NOXSTONE_AXE.get())
                 .add(NoxernaItems.FERREBRIS_AXE.get()).add(NoxernaItems.UMBURAM_AXE.get())
@@ -85,7 +92,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
         tag(NoxernaTags.ItemTags.NOBLEWOOD_RODS)
                 .add(NoxernaItems.NOBLEWOOD_STICK.get());
         tag(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS)
-                .add(NoxernaBlocks.XENON_PLANKS.get().asItem());
+                .add(NoxernaItems.XENON_PLANKS.get())
+                .add(NoxernaItems.KRYPTON_PLANKS.get());
         tag(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS)
                 .add(NoxernaBlocks.NOXUM.get().asItem());
         tag(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS)

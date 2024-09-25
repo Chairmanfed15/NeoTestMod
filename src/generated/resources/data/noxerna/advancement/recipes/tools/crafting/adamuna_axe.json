@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / noxerna:adamuna_tool_materials]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:adamuna_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/adamuna_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / noxerna:adamuna_tool_materials]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/adamuna_axe"
+    ]
+  }
+}

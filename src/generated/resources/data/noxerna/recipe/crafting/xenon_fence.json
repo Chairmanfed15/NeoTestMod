@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "key": {
+    "#": {
+      "item": "noxerna:xenon_planks"
+    },
+    "$": {
+      "tag": "c:rods/noblewood"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "#$#"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:xenon_fence"
+  }
+}

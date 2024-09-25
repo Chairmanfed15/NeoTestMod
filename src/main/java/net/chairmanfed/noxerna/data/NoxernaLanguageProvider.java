@@ -39,32 +39,39 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         add("itemGroup." + TheNoxerna.MODID + ".ingredients", "Noxerna Ingredients");
         add("gamerule.maxQuakeMagnitude", "Maximum Quake Magnitude");
 
+        addBlock(NoxernaBlocks.XENON_LOG, "Xenon Log");
+        addBlock(NoxernaBlocks.XENON_WOOD, "Xenon Wood");
+        addBlock(NoxernaBlocks.STRIPPED_XENON_LOG, "Stripped Xenon Log");
+        addBlock(NoxernaBlocks.STRIPPED_XENON_WOOD, "Stripped Xenon Wood");
+        addBlock(NoxernaBlocks.XENON_PLANKS, "Xenon Planks");
+        addBlock(NoxernaBlocks.XENON_STAIRS, "Xenon Stairs");
+        addBlock(NoxernaBlocks.XENON_SLAB, "Xenon Slab");
+        addBlock(NoxernaBlocks.XENON_FENCE, "Xenon Fence");
+        addBlock(NoxernaBlocks.XENON_FENCE_GATE, "Xenon Fence Gate");
+        addBlock(NoxernaBlocks.XENON_DOOR, "Xenon Door");
+        addBlock(NoxernaBlocks.XENON_TRAPDOOR, "Xenon Trapdoor");
+        addBlock(NoxernaBlocks.XENON_PRESSURE_PLATE, "Xenon Pressure Plate");
+        addBlock(NoxernaBlocks.XENON_BUTTON, "Xenon Button");
+
+        addBlock(NoxernaBlocks.KRYPTON_PLANKS, "Krypton Planks");
+
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
-        addBlock(NoxernaBlocks.NOXUM_BRICKS, "Noxum Bricks");
-        addBlock(NoxernaBlocks.NOXUM_BRICK_STAIRS, "Noxum Brick Stairs");
-        addBlock(NoxernaBlocks.NOXUM_BRICK_SLAB, "Noxum Brick Slab");
-        addBlock(NoxernaBlocks.NOXUM_BRICK_WALL, "Noxum Brick Wall");
-        addBlock(NoxernaBlocks.NOXUM_BUTTON, "Noxum Button");
-        addBlock(NoxernaBlocks.NOXUM_PEBBLE, "Noxum Pebble");
-        addBlock(NoxernaBlocks.NOXUM_PRESSURE_PLATE, "Noxum Pressure Plate");
         addBlock(NoxernaBlocks.NOXUM_STAIRS, "Noxum Stairs");
         addBlock(NoxernaBlocks.NOXUM_SLAB, "Noxum Slab");
         addBlock(NoxernaBlocks.NOXUM_WALL, "Noxum Wall");
-
+        addBlock(NoxernaBlocks.NOXUM_PRESSURE_PLATE, "Noxum Pressure Plate");
+        addBlock(NoxernaBlocks.NOXUM_BUTTON, "Noxum Button");
         addBlock(NoxernaBlocks.POLISHED_NOXUM, "Polished Noxum");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_STAIRS, "Polished Noxum Stairs");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_SLAB, "Polished Noxum Slab");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_WALL, "Polished Noxum Wall");
+        addBlock(NoxernaBlocks.NOXUM_BRICKS, "Noxum Bricks");
+        addBlock(NoxernaBlocks.NOXUM_BRICK_STAIRS, "Noxum Brick Stairs");
+        addBlock(NoxernaBlocks.NOXUM_BRICK_SLAB, "Noxum Brick Slab");
+        addBlock(NoxernaBlocks.NOXUM_BRICK_WALL, "Noxum Brick Wall");
 
-        addBlock(NoxernaBlocks.STRIPPED_XENON_LOG, "Stripped Xenon Log");
-        addBlock(NoxernaBlocks.STRIPPED_XENON_WOOD, "Stripped Xenon Wood");
-
+        addBlock(NoxernaBlocks.NOXUM_PEBBLE, "Noxum Pebble");
         addBlock(NoxernaBlocks.VOIDROCK, "Voidrock");
-
-        addBlock(NoxernaBlocks.XENON_LOG, "Xenon Log");
-        addBlock(NoxernaBlocks.XENON_PLANKS, "Xenon Planks");
-        addBlock(NoxernaBlocks.XENON_STAIRS, "Xenon Stairs");
-        addBlock(NoxernaBlocks.XENON_WOOD, "Xenon Wood");
 
         addItem(NoxernaItems.RAW_FERREBRIS, "Raw Ferrebris");
         addItem(NoxernaItems.RAW_OBSCUPRUM, "Raw Obscuprum");
@@ -101,9 +108,23 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addItem(NoxernaItems.FERREBRIS_SHOVEL, "Ferrebris Shovel");
         addItem(NoxernaItems.FERREBRIS_SWORD, "Ferrebris Sword");
 
+        addItem(NoxernaItems.UMBURAM_AXE, "Umburam Axe");
+        addItem(NoxernaItems.UMBURAM_HOE, "Umburam Hoe");
         addItem(NoxernaItems.UMBURAM_PICKAXE, "Umburam Pickaxe");
+        addItem(NoxernaItems.UMBURAM_SHOVEL, "Umburam Shovel");
+        addItem(NoxernaItems.UMBURAM_SWORD, "Umburam Sword");
+
+        addItem(NoxernaItems.ADAMUNA_AXE, "Adamuna Axe");
+        addItem(NoxernaItems.ADAMUNA_HOE, "Adamuna Hoe");
         addItem(NoxernaItems.ADAMUNA_PICKAXE, "Adamuna Pickaxe");
+        addItem(NoxernaItems.ADAMUNA_SHOVEL, "Adamuna Shovel");
+        addItem(NoxernaItems.ADAMUNA_SWORD, "Adamuna Sword");
+
+        addItem(NoxernaItems.NIHOXITE_AXE, "Nihoxite Axe");
+        addItem(NoxernaItems.NIHOXITE_HOE, "Nihoxite Hoe");
         addItem(NoxernaItems.NIHOXITE_PICKAXE, "Nihoxite Pickaxe");
+        addItem(NoxernaItems.NIHOXITE_SHOVEL, "Nihoxite Shovel");
+        addItem(NoxernaItems.NIHOXITE_SWORD, "Nihoxite Sword");
 
         add(NoxernaTags.BlockTags.BOSS_IMMUNE, "Bosses Cannot Destroy");
         add(NoxernaTags.BlockTags.INFINIBURN_NOXERNA, "Burns Forever in Noxerna");

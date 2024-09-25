@@ -2,6 +2,7 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -42,7 +43,8 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get()).add(NoxernaBlocks.NOXUM_BRICK_SLAB.get())
                 .add(NoxernaBlocks.NOXUM_BRICK_WALL.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get());
         tag(BlockTags.PLANKS)
-                .add(NoxernaBlocks.XENON_PLANKS.get());
+                .add(NoxernaBlocks.XENON_PLANKS.get())
+                .add(NoxernaBlocks.KRYPTON_PLANKS.get());
         tag(BlockTags.SCULK_REPLACEABLE)
                 .add(NoxernaBlocks.NOXUM.get());
         tag(BlockTags.STAIRS)
@@ -53,11 +55,27 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         tag(BlockTags.SLABS)
                 .add(NoxernaBlocks.NOXUM_SLAB.get()).add(NoxernaBlocks.POLISHED_NOXUM_SLAB.get())
                 .add(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
+        tag(BlockTags.WOODEN_SLABS)
+                .add(NoxernaBlocks.XENON_SLAB.get());
+        tag(BlockTags.WOODEN_FENCES)
+                .add(NoxernaBlocks.XENON_FENCE.get());
         tag(BlockTags.WALLS)
                 .add(NoxernaBlocks.NOXUM_WALL.get()).add(NoxernaBlocks.POLISHED_NOXUM_WALL.get())
                 .add(NoxernaBlocks.NOXUM_BRICK_WALL.get());
+        tag(BlockTags.FENCE_GATES)
+                .add(NoxernaBlocks.XENON_FENCE_GATE.get());
+        tag(BlockTags.WOODEN_DOORS)
+                .add(NoxernaBlocks.XENON_DOOR.get());
+        tag(BlockTags.WOODEN_TRAPDOORS)
+                .add(NoxernaBlocks.XENON_TRAPDOOR.get());
+        tag(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(NoxernaBlocks.XENON_PRESSURE_PLATE.get());
         tag(BlockTags.STONE_PRESSURE_PLATES)
                 .add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+        tag(BlockTags.WOODEN_BUTTONS)
+                .add(NoxernaBlocks.XENON_BUTTON.get());
+        tag(BlockTags.STONE_BUTTONS)
+                .add(NoxernaBlocks.NOXUM_BUTTON.get());
         tag(BlockTags.WITHER_IMMUNE)
                 .add(NoxernaBlocks.VOIDROCK.get());
         tag(NoxernaTags.BlockTags.BOSS_IMMUNE)

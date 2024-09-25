@@ -27,7 +27,7 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         return NoxernaBlocks.BLOCKS.getEntries().stream().map(e -> (Block) e.value()).toList();
     }
     protected void dropSlab(Block slabBlock) {
-        this.add(slabBlock, doubleSlab -> this.createSlabItemTable(doubleSlab));
+        this.add(slabBlock, this::createSlabItemTable);
     }
     protected LootTable.Builder createPebbleDrops(Block pebbleBlock) {
         return LootTable.lootTable()
@@ -44,8 +44,12 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
                 );
     }
 
+    protected void dropDoor(Block doorBlock) {
+        this.add(doorBlock, this::createDoorTable);
+    }
+
     protected void dropPebbles(Block pebbleBlock) {
-        this.add(pebbleBlock, pebbleCount -> this.createPebbleDrops(pebbleCount));
+        this.add(pebbleBlock, this::createPebbleDrops);
     }
 
     @Override
@@ -56,13 +60,14 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.STRIPPED_XENON_WOOD.get());
         dropSelf(NoxernaBlocks.XENON_PLANKS.get());
         dropSelf(NoxernaBlocks.XENON_STAIRS.get());
-        // dropSelf(NoxernaBlocks.XENON_SLAB.get());
-        // dropSelf(NoxernaBlocks.XENON_FENCE.get());
-        // dropSelf(NoxernaBlocks.XENON_FENCE_GATE.get());
-        // dropSelf(NoxernaBlocks.XENON_DOOR.get());
-        // dropSelf(NoxernaBlocks.XENON_TRAPDOOR.get());
-        // dropSelf(NoxernaBlocks.XENON_PRESSURE_PLATE.get());
-        // dropSelf(NoxernaBlocks.XENON_BUTTON.get());
+        dropSlab(NoxernaBlocks.XENON_SLAB.get());
+        dropSelf(NoxernaBlocks.XENON_FENCE.get());
+        dropSelf(NoxernaBlocks.XENON_FENCE_GATE.get());
+        dropDoor(NoxernaBlocks.XENON_DOOR.get());
+        dropSelf(NoxernaBlocks.XENON_TRAPDOOR.get());
+        dropSelf(NoxernaBlocks.XENON_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.XENON_BUTTON.get());
+        dropSelf(NoxernaBlocks.KRYPTON_PLANKS.get());
 
         dropSelf(NoxernaBlocks.NOXUM.get());
         dropSelf(NoxernaBlocks.NOXUM_STAIRS.get());

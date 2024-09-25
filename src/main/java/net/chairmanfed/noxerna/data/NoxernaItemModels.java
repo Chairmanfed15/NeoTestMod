@@ -24,6 +24,11 @@ public class NoxernaItemModels extends ItemModelProvider {
         basicItem(NoxernaItems.TENERYL.get());
         basicItem(NoxernaItems.ADAMUNA.get());
         basicItem(NoxernaItems.VITRAGOR.get());
+        basicItem(NoxernaItems.FERREBRIS_NUGGET.get());
+        basicItem(NoxernaItems.OBSCUPRUM_NUGGET.get());
+        basicItem(NoxernaItems.UMBURAM_NUGGET.get());
+        basicItem(NoxernaItems.INPERLUM_NUGGET.get());
+        basicItem(NoxernaItems.NIHOXITE_NUGGET.get());
         basicItem(NoxernaItems.FERREBRIS_INGOT.get());
         basicItem(NoxernaItems.OBSCUPRUM_INGOT.get());
         basicItem(NoxernaItems.UMBURAM_INGOT.get());
