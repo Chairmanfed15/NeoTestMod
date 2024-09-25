@@ -24,6 +24,14 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         woodBlockWithItem(NoxernaBlocks.STRIPPED_XENON_WOOD, NoxernaBlocks.STRIPPED_XENON_LOG);
         blockWithItem(NoxernaBlocks.XENON_PLANKS);
         stairBlockWithItem(NoxernaBlocks.XENON_STAIRS, NoxernaBlocks.XENON_PLANKS);
+        slabBlockWithItem(NoxernaBlocks.XENON_SLAB, NoxernaBlocks.XENON_PLANKS);
+        fenceBlockWithItem(NoxernaBlocks.XENON_FENCE, NoxernaBlocks.XENON_PLANKS);
+        fenceGateWithItem(NoxernaBlocks.XENON_FENCE_GATE, NoxernaBlocks.XENON_PLANKS);
+        doorBlockWithItem(NoxernaBlocks.XENON_DOOR);
+        trapDoorWithItem(NoxernaBlocks.XENON_TRAPDOOR);
+        pressurePlateWithItem(NoxernaBlocks.XENON_PRESSURE_PLATE, NoxernaBlocks.XENON_PLANKS);
+        buttonWithItem(NoxernaBlocks.XENON_BUTTON, NoxernaBlocks.XENON_PLANKS);
+        blockWithItem(NoxernaBlocks.KRYPTON_PLANKS);
         blockWithItem(NoxernaBlocks.NOXUM);
         blockWithItem(NoxernaBlocks.NOXUM_BRICKS);
         blockWithItem(NoxernaBlocks.POLISHED_NOXUM);
@@ -66,9 +74,27 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         this.slabBlock((SlabBlock) block.get(), this.blockTexture(baseBlock.get()), this.blockTexture(baseBlock.get()));
         this.simpleBlockItem(block);
     }
+    public void fenceBlockWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.fenceBlock((FenceBlock) block.get(), this.blockTexture(baseBlock.get()));
+        this.itemModels().fenceInventory(block.getId().toString(), this.blockTexture(baseBlock.get()));
+    }
+    public void fenceGateWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.fenceGateBlock((FenceGateBlock) block.get(), this.blockTexture(baseBlock.get()));
+        this.itemModels().fenceGate(block.getId().toString(), this.blockTexture(baseBlock.get()));
+    }
     public void wallBlockWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
         this.wallBlock((WallBlock) block.get(), this.blockTexture(baseBlock.get()));
         this.itemModels().wallInventory(block.getId().toString(), this.blockTexture(baseBlock.get()));
+    }
+    public void doorBlockWithItem(DeferredBlock<Block> block) {
+        this.doorBlock((DoorBlock) block.get(),
+                this.blockTexture(block.get()).withSuffix("_bottom"),
+                this.blockTexture(block.get()).withSuffix("_top"));
+        this.itemModels().basicItem(ResourceLocation.parse(block.getId().toString()));
+    }
+    public void trapDoorWithItem(DeferredBlock<Block> block) {
+        this.trapdoorBlock((TrapDoorBlock) block.get(), this.blockTexture(block.get()), true);
+        this.itemModels().trapdoorOrientableBottom(block.getId().toString(), this.blockTexture(block.get()));
     }
     public void pressurePlateWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
         this.pressurePlateBlock((PressurePlateBlock) block.get(), this.blockTexture(baseBlock.get()));

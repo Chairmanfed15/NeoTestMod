@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "noxerna:block/xenon_door_bottom",
+    "top": "noxerna:block/xenon_door_top"
+  }
+}

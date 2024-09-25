@@ -26,6 +26,14 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaBlocks.STRIPPED_XENON_WOOD);
                         output.accept(NoxernaBlocks.XENON_PLANKS);
                         output.accept(NoxernaBlocks.XENON_STAIRS);
+                        output.accept(NoxernaBlocks.XENON_SLAB);
+                        output.accept(NoxernaBlocks.XENON_FENCE);
+                        output.accept(NoxernaBlocks.XENON_FENCE_GATE);
+                        output.accept(NoxernaBlocks.XENON_DOOR);
+                        output.accept(NoxernaBlocks.XENON_TRAPDOOR);
+                        output.accept(NoxernaBlocks.XENON_PRESSURE_PLATE);
+                        output.accept(NoxernaBlocks.XENON_BUTTON);
+                        output.accept(NoxernaBlocks.KRYPTON_PLANKS);
                         output.accept(NoxernaBlocks.NOXUM);
                         output.accept(NoxernaBlocks.NOXUM_STAIRS);
                         output.accept(NoxernaBlocks.NOXUM_SLAB);
@@ -141,6 +149,14 @@ public class NoxernaCreativeModeTabs {
             event.accept(NoxernaBlocks.STRIPPED_XENON_WOOD.get());
             event.accept(NoxernaBlocks.XENON_PLANKS.get());
             event.accept(NoxernaBlocks.XENON_STAIRS.get());
+            event.accept(NoxernaBlocks.XENON_SLAB.get());
+            event.accept(NoxernaBlocks.XENON_FENCE.get());
+            event.accept(NoxernaBlocks.XENON_FENCE_GATE.get());
+            event.accept(NoxernaBlocks.XENON_DOOR.get());
+            event.accept(NoxernaBlocks.XENON_TRAPDOOR.get());
+            event.accept(NoxernaBlocks.XENON_PRESSURE_PLATE.get());
+            event.accept(NoxernaBlocks.XENON_BUTTON.get());
+            event.accept(NoxernaBlocks.KRYPTON_PLANKS.get());
             event.accept(NoxernaBlocks.NOXUM.get());
             event.accept(NoxernaBlocks.NOXUM_STAIRS.get());
             event.accept(NoxernaBlocks.NOXUM_SLAB.get());
@@ -162,10 +178,7 @@ public class NoxernaCreativeModeTabs {
             event.accept(NoxernaBlocks.XENON_LOG.get());
             event.accept(NoxernaBlocks.VOIDROCK.get());
         }
-        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
-            event.accept(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
-            event.accept(NoxernaBlocks.NOXUM_BUTTON.get());
-        }
+        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {}
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(NoxernaItems.NOBLEWOOD_SHOVEL.get());
             event.accept(NoxernaItems.NOBLEWOOD_PICKAXE.get());
@@ -214,6 +227,11 @@ public class NoxernaCreativeModeTabs {
             event.accept(NoxernaItems.TENERYL.get());
             event.accept(NoxernaItems.ADAMUNA.get());
             event.accept(NoxernaItems.VITRAGOR.get());
+            event.accept(NoxernaItems.FERREBRIS_NUGGET.get());
+            event.accept(NoxernaItems.OBSCUPRUM_NUGGET.get());
+            event.accept(NoxernaItems.UMBURAM_NUGGET.get());
+            event.accept(NoxernaItems.INPERLUM_NUGGET.get());
+            event.accept(NoxernaItems.NIHOXITE_NUGGET.get());
             event.accept(NoxernaItems.FERREBRIS_INGOT.get());
             event.accept(NoxernaItems.OBSCUPRUM_INGOT.get());
             event.accept(NoxernaItems.UMBURAM_INGOT.get());

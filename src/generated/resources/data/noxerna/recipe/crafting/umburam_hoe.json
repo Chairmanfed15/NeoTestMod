@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "umburam_tools",
+  "key": {
+    "#": {
+      "tag": "noxerna:umburam_tool_materials"
+    },
+    "$": {
+      "tag": "c:rods/noblewood"
+    }
+  },
+  "pattern": [
+    "## ",
+    " $ ",
+    " $ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:umburam_hoe"
+  }
+}

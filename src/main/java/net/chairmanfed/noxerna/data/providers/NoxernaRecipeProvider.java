@@ -47,10 +47,47 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('#', input)
                 .unlockedBy("has_" + input, has(input));
     }
+    public ShapedRecipeBuilder makeWoodenFence(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, 3)
+                .pattern("#$#")
+                .pattern("#$#")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
     public ShapedRecipeBuilder makeWall(Item input, ItemLike result) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 6)
                 .pattern("###")
                 .pattern("###")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeWoodenFenceGate(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
+                .pattern("$#$")
+                .pattern("$#$")
+                .define('#', input)
+                .define('$', NoxernaTags.ItemTags.NOBLEWOOD_RODS)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeDoor(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result, 3)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makeTrapdoor(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result, 2)
+                .pattern("###")
+                .pattern("###")
+                .define('#', input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makePressurePlate(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, result)
+                .pattern("##")
                 .define('#', input)
                 .unlockedBy("has_" + input, has(input));
     }
@@ -71,9 +108,9 @@ public class NoxernaRecipeProvider extends RecipeProvider {
     }
     public ShapedRecipeBuilder packing3x3(Item input, ItemLike result, Item tagInput) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
-                .pattern("###")
-                .pattern("#$#")
-                .pattern("###")
+                .pattern("$$$")
+                .pattern("$#$")
+                .pattern("$$$")
                 .define('#', input)
                 .define('$', tagInput)
                 .unlockedBy("has_" + input, has(input));
@@ -141,6 +178,11 @@ public class NoxernaRecipeProvider extends RecipeProvider {
     }
     public ShapelessRecipeBuilder unpacking3x3(Item input, ItemLike result) {
         return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result, 9)
+                .requires(input)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public ShapelessRecipeBuilder makeButton(Item input, ItemLike result) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, result)
                 .requires(input)
                 .unlockedBy("has_" + input, has(input));
     }

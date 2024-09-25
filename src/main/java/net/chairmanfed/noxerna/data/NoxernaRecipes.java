@@ -27,6 +27,33 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makePlanks(NoxernaTags.ItemTags.XENON_LOGS, NoxernaBlocks.XENON_PLANKS.get().asItem())
                 .group("planks")
                 .save(output, name("crafting/xenon_planks"));
+        makeStairs(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_STAIRS.get())
+                .group("wooden_stairs")
+                .save(output, name("crafting/xenon_stairs"));
+        makeSlab(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_SLAB.get())
+                .group("wooden_slab")
+                .save(output, name("crafting/xenon_slab"));
+        makeSlabIntoBlock(NoxernaItems.XENON_SLAB.get(), NoxernaItems.XENON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/xenon_planks_from_slab"));
+        makeWoodenFence(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_FENCE.get())
+                .group("wooden_fence")
+                .save(output, name("crafting/xenon_fence"));
+        makeWoodenFenceGate(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_FENCE_GATE.get())
+                .group("wooden_fence_gate")
+                .save(output, name("crafting/xenon_fence_gate"));
+        makeDoor(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_DOOR.get())
+                .group("wooden_door")
+                .save(output, name("crafting/xenon_door"));
+        makeTrapdoor(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_TRAPDOOR.get())
+                .group("wooden_trapdoor")
+                .save(output, name("crafting/xenon_trapdoor"));
+        makePressurePlate(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_PRESSURE_PLATE.get())
+                .group("wooden_pressure_plate")
+                .save(output, name("crafting/xenon_pressure_plate"));
+        makeButton(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_BUTTON.get())
+                .group("wooden_button")
+                .save(output, name("crafting/xenon_button"));
         makeStairs(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_STAIRS.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_stairs"));
@@ -39,6 +66,12 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeWall(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_WALL.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_wall"));
+        makePressurePlate(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_PRESSURE_PLATE.get())
+                .group("stone_pressure_plate")
+                .save(output, name("crafting/noxum_pressure_plate"));
+        makeButton(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_BUTTON.get())
+                .group("stone_button")
+                .save(output, name("crafting/noxum_button"));
         unpacking3x3(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_PEBBLE.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_pebble"));
@@ -102,27 +135,102 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeSword(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_SWORD.get())
                 .group("noblewood_tools")
                 .save(output, name("crafting/noblewood_sword"));
+
         makeAxe(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_AXE.get())
                 .group("noxstone_tools")
                 .save(output, name("crafting/noxstone_axe"));
+        makeHoe(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_HOE.get())
+                .group("noxstone_tools")
+                .save(output, name("crafting/noxstone_hoe"));
         makePickaxe(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_PICKAXE.get())
                 .group("noxstone_tools")
                 .save(output, name("crafting/noxstone_pickaxe"));
+        makeShovel(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_SHOVEL.get())
+                .group("noxstone_tools")
+                .save(output, name("crafting/noxstone_shovel"));
+        makeSword(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, NoxernaItems.NOXSTONE_SWORD.get())
+                .group("noxstone_tools")
+                .save(output, name("crafting/noxstone_sword"));
+
+        makeAxe(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, NoxernaItems.FERREBRIS_AXE.get())
+                .group("ferrebris_tools")
+                .save(output, name("crafting/ferrebris_axe"));
+        makeHoe(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, NoxernaItems.FERREBRIS_HOE.get())
+                .group("ferrebris_tools")
+                .save(output, name("crafting/ferrebris_hoe"));
         makePickaxe(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, NoxernaItems.FERREBRIS_PICKAXE.get())
                 .group("ferrebris_tools")
                 .save(output, name("crafting/ferrebris_pickaxe"));
+        makeShovel(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, NoxernaItems.FERREBRIS_SHOVEL.get())
+                .group("ferrebris_tools")
+                .save(output, name("crafting/ferrebris_shovel"));
+        makeSword(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, NoxernaItems.FERREBRIS_SWORD.get())
+                .group("ferrebris_tools")
+                .save(output, name("crafting/ferrebris_sword"));
+
+        makeAxe(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, NoxernaItems.UMBURAM_AXE.get())
+                .group("umburam_tools")
+                .save(output, name("crafting/umburam_axe"));
+        makeHoe(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, NoxernaItems.UMBURAM_HOE.get())
+                .group("umburam_tools")
+                .save(output, name("crafting/umburam_hoe"));
         makePickaxe(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, NoxernaItems.UMBURAM_PICKAXE.get())
                 .group("umburam_tools")
                 .save(output, name("crafting/umburam_pickaxe"));
+        makeShovel(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, NoxernaItems.UMBURAM_SHOVEL.get())
+                .group("umburam_tools")
+                .save(output, name("crafting/umburam_shovel"));
+        makeSword(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, NoxernaItems.UMBURAM_SWORD.get())
+                .group("umburam_tools")
+                .save(output, name("crafting/umburam_sword"));
+
+        makeAxe(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_AXE.get())
+                .group("adamuna_tools")
+                .save(output, name("crafting/adamuna_axe"));
+        makeHoe(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_HOE.get())
+                .group("adamuna_tools")
+                .save(output, name("crafting/adamuna_hoe"));
         makePickaxe(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_PICKAXE.get())
                 .group("adamuna_tools")
                 .save(output, name("crafting/adamuna_pickaxe"));
+        makeShovel(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_SHOVEL.get())
+                .group("adamuna_tools")
+                .save(output, name("crafting/adamuna_shovel"));
+        makeSword(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_SWORD.get())
+                .group("adamuna_tools")
+                .save(output, name("crafting/adamuna_sword"));
+
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_AXE.get(), NoxernaItems.NIHOXITE_AXE.get())
+                .save(output, name("smithing/nihoxite_axe"));
+        nihoxiteUpgrade(Items.DIAMOND_AXE, NoxernaItems.NIHOXITE_AXE.get())
+                .save(output, name("smithing/diamond_nihoxite_axe"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_HOE.get(), NoxernaItems.NIHOXITE_HOE.get())
+                .save(output, name("smithing/nihoxite_hoe"));
+        nihoxiteUpgrade(Items.DIAMOND_HOE, NoxernaItems.NIHOXITE_HOE.get())
+                .save(output, name("smithing/diamond_nihoxite_hoe"));
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_PICKAXE.get(), NoxernaItems.NIHOXITE_PICKAXE.get())
                 .save(output, name("smithing/nihoxite_pickaxe"));
         nihoxiteUpgrade(Items.DIAMOND_PICKAXE, NoxernaItems.NIHOXITE_PICKAXE.get())
                 .save(output, name("smithing/diamond_nihoxite_pickaxe"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_SHOVEL.get(), NoxernaItems.NIHOXITE_SHOVEL.get())
+                .save(output, name("smithing/nihoxite_shovel"));
+        nihoxiteUpgrade(Items.DIAMOND_SHOVEL, NoxernaItems.NIHOXITE_SHOVEL.get())
+                .save(output, name("smithing/diamond_nihoxite_shovel"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_SWORD.get(), NoxernaItems.NIHOXITE_SWORD.get())
+                .save(output, name("smithing/nihoxite_sword"));
+        nihoxiteUpgrade(Items.DIAMOND_SWORD, NoxernaItems.NIHOXITE_SWORD.get())
+                .save(output, name("smithing/diamond_nihoxite_sword"));
+
+        netheriteUpgrade(NoxernaItems.ADAMUNA_AXE.get(), Items.NETHERITE_AXE)
+                .save(output, name("smithing/adamuna_netherite_axe"));
+        netheriteUpgrade(NoxernaItems.ADAMUNA_HOE.get(), Items.NETHERITE_HOE)
+                .save(output, name("smithing/adamuna_netherite_hoe"));
         netheriteUpgrade(NoxernaItems.ADAMUNA_PICKAXE.get(), Items.NETHERITE_PICKAXE)
                 .save(output, name("smithing/adamuna_netherite_pickaxe"));
+        netheriteUpgrade(NoxernaItems.ADAMUNA_SHOVEL.get(), Items.NETHERITE_SHOVEL)
+                .save(output, name("smithing/adamuna_netherite_shovel"));
+        netheriteUpgrade(NoxernaItems.ADAMUNA_SWORD.get(), Items.NETHERITE_SWORD)
+                .save(output, name("smithing/adamuna_netherite_sword"));
 
         // Stonecutting Recipes
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM.get().asItem())
