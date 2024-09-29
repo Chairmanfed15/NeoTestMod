@@ -9,7 +9,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
@@ -24,6 +23,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
     @Override
     protected void buildRecipes (RecipeOutput output) {
         // Building Block Recipes
+        // Xenon
         makePlanks(NoxernaTags.ItemTags.XENON_LOGS, NoxernaBlocks.XENON_PLANKS.get().asItem())
                 .group("planks")
                 .save(output, name("crafting/xenon_planks"));
@@ -54,6 +54,10 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeButton(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_BUTTON.get())
                 .group("wooden_button")
                 .save(output, name("crafting/xenon_button"));
+        // Krypton
+        makePlanks(NoxernaTags.ItemTags.KRYPTON_LOGS, NoxernaItems.KRYPTON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/krypton_planks"));
         makeStairs(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_STAIRS.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_stairs"));
@@ -108,9 +112,16 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeWall(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
                 .group("noxum_bricks")
                 .save(output, name("crafting/noxum_brick_wall"));
+        packing3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_BLOCK.get(),
+                NoxernaTags.ItemTags.FERREBRIS_INGOTS)
+                .group("ferrebris")
+                .save(output, name("crafting/ferrebris_block"));
 
         // Noblewood Alt Recipes
-        makeCraftingTable(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, Items.CRAFTING_TABLE)
+        villagerWorkStation(NoxernaTags.ItemTags.ANY_IRON_INGOT, Items.SMITHING_TABLE)
+                .group("smithing_tables")
+                .save(output, name("crafting/noblewood_smithing_table"));
+        packing2x2(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, Items.CRAFTING_TABLE)
                 .group("crafting_tables")
                 .save(output, name("crafting/noblewood_crafting_table"));
 
@@ -118,6 +129,24 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeSticks(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_STICK.get())
                 .group("sticks")
                 .save(output, name("crafting/noblewood_stick"));
+        packing3x3(NoxernaItems.FERREBRIS_NUGGET.get(), NoxernaItems.FERREBRIS_INGOT.get(),
+                NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
+                .group("ferrebris")
+                .save(output, name("crafting/ferrebris_ingot_from_nugget"));
+        unpacking3x3(NoxernaItems.FERREBRIS_BLOCK.get(), NoxernaItems.FERREBRIS_INGOT.get())
+                .group("ferrebris")
+                .save(output, name("crafting/ferrebris_ingot_from_block"));
+        unpacking3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_NUGGET.get())
+                .group("ferrebris")
+                .save(output, name("crafting/ferrebris_nugget"));
+        smelting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
+                0.7f, 200)
+                .group("ferrebris_ingot")
+                .save(output, name("smelting/ferrebris_ingot"));
+        blasting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
+                0.7f, 100)
+                .group("ferrebris_ingot")
+                .save(output, name("blasting/ferrebris_ingot"));
 
         // Tool Recipes
         makeAxe(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_AXE.get())
@@ -259,5 +288,10 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/noxum_bricks_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
                 .save(output, name("stonecutting/noxum_bricks_wall_from_stonecutting"));
+
+        stonecutting(NoxernaTags.ItemTags.FERREBRIS_STORAGE_BLOCKS, NoxernaItems.FERREBRIS_PLATING.get(), 4)
+                .save(output, name("stonecutting/ferrebris_plating_from_block"));
+        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING.get())
+                .save(output, name("stonecutting/ferrebris_plating"));
     }
 }

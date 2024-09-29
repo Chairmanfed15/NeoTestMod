@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "smithing_tables",
+  "key": {
+    "#": {
+      "tag": "noxerna:noblewood_planks"
+    },
+    "$": {
+      "tag": "noxerna:any_iron_ingot"
+    }
+  },
+  "pattern": [
+    "$$",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:smithing_table"
+  }
+}

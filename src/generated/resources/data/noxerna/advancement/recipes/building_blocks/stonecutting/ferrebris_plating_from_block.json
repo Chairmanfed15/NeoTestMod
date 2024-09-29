@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:storage_blocks/ferrebris]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:storage_blocks/ferrebris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:stonecutting/ferrebris_plating_from_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:storage_blocks/ferrebris]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:stonecutting/ferrebris_plating_from_block"
+    ]
+  }
+}

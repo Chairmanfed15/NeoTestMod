@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/krypton_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/krypton_planks"
+    },
+    "type=top": {
+      "model": "noxerna:block/krypton_slab_top"
+    }
+  }
+}

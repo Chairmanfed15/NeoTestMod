@@ -3,6 +3,7 @@ package net.chairmanfed.noxerna.data;
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlockStateProperties;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -18,6 +19,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        // Xenon Wood set
         logBlockWithItem(NoxernaBlocks.XENON_LOG);
         woodBlockWithItem(NoxernaBlocks.XENON_WOOD, NoxernaBlocks.XENON_LOG);
         logBlockWithItem(NoxernaBlocks.STRIPPED_XENON_LOG);
@@ -27,18 +29,85 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         slabBlockWithItem(NoxernaBlocks.XENON_SLAB, NoxernaBlocks.XENON_PLANKS);
         fenceBlockWithItem(NoxernaBlocks.XENON_FENCE, NoxernaBlocks.XENON_PLANKS);
         fenceGateWithItem(NoxernaBlocks.XENON_FENCE_GATE, NoxernaBlocks.XENON_PLANKS);
-        doorBlockWithItem(NoxernaBlocks.XENON_DOOR);
+        doorBlockWithItem(NoxernaBlocks.XENON_DOOR, "cutout");
         trapDoorWithItem(NoxernaBlocks.XENON_TRAPDOOR);
         pressurePlateWithItem(NoxernaBlocks.XENON_PRESSURE_PLATE, NoxernaBlocks.XENON_PLANKS);
         buttonWithItem(NoxernaBlocks.XENON_BUTTON, NoxernaBlocks.XENON_PLANKS);
+
+        // Krypton Wood set
+        logBlockWithItem(NoxernaBlocks.KRYPTON_LOG);
+        woodBlockWithItem(NoxernaBlocks.KRYPTON_WOOD, NoxernaBlocks.KRYPTON_LOG);
+        logBlockWithItem(NoxernaBlocks.STRIPPED_KRYPTON_LOG);
+        woodBlockWithItem(NoxernaBlocks.STRIPPED_KRYPTON_WOOD, NoxernaBlocks.STRIPPED_KRYPTON_LOG);
         blockWithItem(NoxernaBlocks.KRYPTON_PLANKS);
+        stairBlockWithItem(NoxernaBlocks.KRYPTON_STAIRS, NoxernaBlocks.KRYPTON_PLANKS);
+        slabBlockWithItem(NoxernaBlocks.KRYPTON_SLAB, NoxernaBlocks.KRYPTON_PLANKS);
+        fenceBlockWithItem(NoxernaBlocks.KRYPTON_FENCE, NoxernaBlocks.KRYPTON_PLANKS);
+        fenceGateWithItem(NoxernaBlocks.KRYPTON_FENCE_GATE, NoxernaBlocks.KRYPTON_PLANKS);
+        doorBlockWithItem(NoxernaBlocks.KRYPTON_DOOR, "cutout");
+        // trapDoorWithItem(NoxernaBlocks.KRYPTON_TRAPDOOR);
+        pressurePlateWithItem(NoxernaBlocks.KRYPTON_PRESSURE_PLATE, NoxernaBlocks.KRYPTON_PLANKS);
+        buttonWithItem(NoxernaBlocks.KRYPTON_BUTTON, NoxernaBlocks.KRYPTON_PLANKS);
+
+        // Noxum Stone set
         blockWithItem(NoxernaBlocks.NOXUM);
-        blockWithItem(NoxernaBlocks.NOXUM_BRICKS);
-        blockWithItem(NoxernaBlocks.POLISHED_NOXUM);
-        blockWithItem(NoxernaBlocks.VOIDROCK);
         stairBlockWithItem(NoxernaBlocks.NOXUM_STAIRS, NoxernaBlocks.NOXUM);
-        stairBlockWithItem(NoxernaBlocks.NOXUM_BRICK_STAIRS, NoxernaBlocks.NOXUM_BRICKS);
+        blockWithItem(NoxernaBlocks.POLISHED_NOXUM);
         stairBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_STAIRS, NoxernaBlocks.POLISHED_NOXUM);
+        blockWithItem(NoxernaBlocks.NOXUM_BRICKS);
+        stairBlockWithItem(NoxernaBlocks.NOXUM_BRICK_STAIRS, NoxernaBlocks.NOXUM_BRICKS);
+
+        // Ferrebris Metal set
+        blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
+        blockWithItem(NoxernaBlocks.FERREBRIS_PLATING);
+        stairBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_STAIRS, NoxernaBlocks.FERREBRIS_PLATING);
+        slabBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_SLAB, NoxernaBlocks.FERREBRIS_PLATING);
+        wallBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_WALL, NoxernaBlocks.FERREBRIS_PLATING);
+
+        // Umburam Metal set
+        blockWithItem(NoxernaBlocks.UMBURAM_BLOCK);
+        blockWithItem(NoxernaBlocks.UMBURAM_PLATING);
+
+        // Teneryl Gem set
+        blockWithItem(NoxernaBlocks.TENERYL_BLOCK);
+
+        // Adamuna Gem set
+        blockWithItem(NoxernaBlocks.ADAMUNA_BLOCK);
+
+        // Inperlum Metal set
+        blockWithItem(NoxernaBlocks.INPERLUM_BLOCK);
+        blockWithItem(NoxernaBlocks.INPERLUM_PLATING);
+
+        // Nihoxite Metal set
+        blockWithItem(NoxernaBlocks.NIHOXITE_BLOCK);
+        blockWithItem(NoxernaBlocks.NIHOXITE_PLATING);
+
+        // Vitragor Gem set
+        blockWithItem(NoxernaBlocks.VITRAGOR_BLOCK);
+
+        // Obscuprum Metal set
+        blockWithItem(NoxernaBlocks.OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BLOCK);
+            // Cut
+        blockWithItem(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.OXIDIZED_CUT_OBSCUPRUM_BLOCK);
+            // Bricks
+        blockWithItem(NoxernaBlocks.OBSCUPRUM_BRICKS);
+        blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BRICKS);
+        blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BRICKS);
+        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BRICKS);
+            // Plating
+        blockWithItem(NoxernaBlocks.OBSCUPRUM_PLATING);
+        blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING);
+        blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING);
+        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING);
+
+        // Set-less Blocks
+        blockWithItem(NoxernaBlocks.VOIDROCK);
         slabBlockWithItem(NoxernaBlocks.NOXUM_SLAB, NoxernaBlocks.NOXUM);
         slabBlockWithItem(NoxernaBlocks.NOXUM_BRICK_SLAB, NoxernaBlocks.NOXUM_BRICKS);
         slabBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_SLAB, NoxernaBlocks.POLISHED_NOXUM);
@@ -90,6 +159,12 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         this.doorBlock((DoorBlock) block.get(),
                 this.blockTexture(block.get()).withSuffix("_bottom"),
                 this.blockTexture(block.get()).withSuffix("_top"));
+        this.itemModels().basicItem(ResourceLocation.parse(block.getId().toString()));
+    }
+    public void doorBlockWithItem(DeferredBlock<Block> block, String renderType) {
+        this.doorBlockWithRenderType((DoorBlock) block.get(),
+                this.blockTexture(block.get()).withSuffix("_bottom"),
+                this.blockTexture(block.get()).withSuffix("_top"), renderType);
         this.itemModels().basicItem(ResourceLocation.parse(block.getId().toString()));
     }
     public void trapDoorWithItem(DeferredBlock<Block> block) {

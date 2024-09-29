@@ -1,10 +1,12 @@
 package net.chairmanfed.noxerna.data.providers;
 
+import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -17,6 +19,9 @@ import java.util.concurrent.CompletableFuture;
 public class NoxernaRecipeProvider extends RecipeProvider {
     public NoxernaRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
+    }
+    private ResourceLocation name(String name) {
+        return ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, name);
     }
     // Shaped Recipes
     public ShapedRecipeBuilder makeBricks(Item input, ItemLike result) {
@@ -91,7 +96,25 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('#', input)
                 .unlockedBy("has_" + input, has(input));
     }
-    public ShapedRecipeBuilder makeCraftingTable(TagKey<Item> input, ItemLike result) {
+    public ShapedRecipeBuilder villagerWorkStation(Item input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+                .pattern("$$")
+                .pattern("##")
+                .pattern("##")
+                .define('$', input)
+                .define('#', NoxernaTags.ItemTags.NOBLEWOOD_PLANKS)
+                .unlockedBy("has" + input, has(input));
+    }
+    public ShapedRecipeBuilder villagerWorkStation(TagKey<Item> input, Item result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+                .pattern("$$")
+                .pattern("##")
+                .pattern("##")
+                .define('$', input)
+                .define('#', NoxernaTags.ItemTags.NOBLEWOOD_PLANKS)
+                .unlockedBy("has" + input, has(input));
+    }
+    public ShapedRecipeBuilder packing2x2(TagKey<Item> input, ItemLike result) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
                 .pattern("##")
                 .pattern("##")
@@ -99,15 +122,15 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .unlockedBy("has" + input, has(input));
     }
     public ShapedRecipeBuilder packing3x3(Item input, ItemLike result) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
                 .define('#', input)
                 .unlockedBy("has" + input, has(input));
     }
-    public ShapedRecipeBuilder packing3x3(Item input, ItemLike result, Item tagInput) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
+    public ShapedRecipeBuilder packing3x3(Item input, ItemLike result, TagKey tagInput) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
                 .pattern("$$$")
                 .pattern("$#$")
                 .pattern("$$$")
@@ -177,7 +200,7 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_" + input, has(input));
     }
     public ShapelessRecipeBuilder unpacking3x3(Item input, ItemLike result) {
-        return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result, 9)
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, result, 9)
                 .requires(input)
                 .unlockedBy("has_" + input, has(input));
     }
@@ -203,6 +226,25 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                         Ingredient.of(Items.NETHERITE_INGOT),
                         RecipeCategory.TOOLS, result)
                 .unlocks("has_netherite", has(Items.NETHERITE_INGOT));
+    }
+
+    public SimpleCookingRecipeBuilder smelting(
+            Item input, Item result, Float experience, Integer time) {
+        return SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(input), RecipeCategory.MISC, result, experience.floatValue(), time)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public SimpleCookingRecipeBuilder smelting(
+            TagKey<Item> input, Item result, Float experience, Integer time) {
+        return SimpleCookingRecipeBuilder.smelting(
+                Ingredient.of(input), RecipeCategory.MISC, result, experience.floatValue(), time)
+                .unlockedBy("has_" + input, has(input));
+    }
+    public SimpleCookingRecipeBuilder blasting(
+            TagKey<Item> input, Item result, Float experience, Integer time) {
+        return SimpleCookingRecipeBuilder.blasting(
+                        Ingredient.of(input), RecipeCategory.MISC, result, experience.floatValue(), time)
+                .unlockedBy("has_" + input, has(input));
     }
 
     // Stonecutter Recipes

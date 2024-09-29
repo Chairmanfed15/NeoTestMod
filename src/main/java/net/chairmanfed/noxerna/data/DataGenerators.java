@@ -43,6 +43,7 @@ public class DataGenerators {
         generator.addProvider(server, itemTags);
         EntityTypeTagsProvider entityTags = new NoxernaEntityTags(output, lookupProvider, existingFileHelper);
         generator.addProvider(server, entityTags);
+        generator.addProvider(server, new NoxernaDataMaps(output, lookupProvider));
         generator.addProvider(server, new NoxernaRecipes(output, lookupProvider));
         generator.addProvider(server, new NoxernaLootTables(output, lookupProvider));
         generator.addProvider(server, new NoxernaAdvancementProvider(output, lookupProvider, existingFileHelper));

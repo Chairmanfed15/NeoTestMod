@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "noxerna:block/ferrebris_plating",
+    "side": "noxerna:block/ferrebris_plating",
+    "top": "noxerna:block/ferrebris_plating"
+  }
+}

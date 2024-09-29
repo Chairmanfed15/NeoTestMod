@@ -32,13 +32,17 @@ public class NoxernaLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // Creative Tabs
         add("itemGroup." + TheNoxerna.MODID + ".building_blocks", "Noxerna Building Blocks");
         add("itemGroup." + TheNoxerna.MODID + ".natural_blocks", "Noxerna Natural Blocks");
         add("itemGroup." + TheNoxerna.MODID + ".tools_and_utilities", "Noxerna Tools & Utilities");
         add("itemGroup." + TheNoxerna.MODID + ".combat", "Noxerna Combat");
         add("itemGroup." + TheNoxerna.MODID + ".ingredients", "Noxerna Ingredients");
+        // Game Rules
         add("gamerule.maxQuakeMagnitude", "Maximum Quake Magnitude");
 
+        // Building Blocks
+        // Xenon Wood set
         addBlock(NoxernaBlocks.XENON_LOG, "Xenon Log");
         addBlock(NoxernaBlocks.XENON_WOOD, "Xenon Wood");
         addBlock(NoxernaBlocks.STRIPPED_XENON_LOG, "Stripped Xenon Log");
@@ -52,40 +56,70 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addBlock(NoxernaBlocks.XENON_TRAPDOOR, "Xenon Trapdoor");
         addBlock(NoxernaBlocks.XENON_PRESSURE_PLATE, "Xenon Pressure Plate");
         addBlock(NoxernaBlocks.XENON_BUTTON, "Xenon Button");
-
+        // Krypton Wood set
+        addBlock(NoxernaBlocks.KRYPTON_LOG, "Krypton Log");
+        addBlock(NoxernaBlocks.KRYPTON_WOOD, "Krypton Wood");
+        addBlock(NoxernaBlocks.STRIPPED_KRYPTON_LOG, "Stripped Krypton Log");
+        addBlock(NoxernaBlocks.STRIPPED_KRYPTON_WOOD, "Stripped Krypton Wood");
         addBlock(NoxernaBlocks.KRYPTON_PLANKS, "Krypton Planks");
-
+        // Noxum Stone set
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
         addBlock(NoxernaBlocks.NOXUM_STAIRS, "Noxum Stairs");
         addBlock(NoxernaBlocks.NOXUM_SLAB, "Noxum Slab");
         addBlock(NoxernaBlocks.NOXUM_WALL, "Noxum Wall");
         addBlock(NoxernaBlocks.NOXUM_PRESSURE_PLATE, "Noxum Pressure Plate");
         addBlock(NoxernaBlocks.NOXUM_BUTTON, "Noxum Button");
+            // Polished
         addBlock(NoxernaBlocks.POLISHED_NOXUM, "Polished Noxum");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_STAIRS, "Polished Noxum Stairs");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_SLAB, "Polished Noxum Slab");
         addBlock(NoxernaBlocks.POLISHED_NOXUM_WALL, "Polished Noxum Wall");
+            // Bricks
         addBlock(NoxernaBlocks.NOXUM_BRICKS, "Noxum Bricks");
         addBlock(NoxernaBlocks.NOXUM_BRICK_STAIRS, "Noxum Brick Stairs");
         addBlock(NoxernaBlocks.NOXUM_BRICK_SLAB, "Noxum Brick Slab");
         addBlock(NoxernaBlocks.NOXUM_BRICK_WALL, "Noxum Brick Wall");
+        // Ferrebris Metal set
+        addBlock(NoxernaBlocks.FERREBRIS_BLOCK, "Block of Ferrebris");
+            // Plating
+        addBlock(NoxernaBlocks.FERREBRIS_PLATING, "Ferrebris Plating");
+        addBlock(NoxernaBlocks.FERREBRIS_PLATING_STAIRS, "Ferrebris Plating Stairs");
+        addBlock(NoxernaBlocks.FERREBRIS_PLATING_SLAB, "Ferrebris Plating Slab");
+        addBlock(NoxernaBlocks.FERREBRIS_PLATING_WALL, "Ferrebris Plating Wall");
 
+        // Natural Blocks
+        // Stones
         addBlock(NoxernaBlocks.NOXUM_PEBBLE, "Noxum Pebble");
         addBlock(NoxernaBlocks.VOIDROCK, "Voidrock");
 
+        // Ingredients
+        // Raw Materials
         addItem(NoxernaItems.RAW_FERREBRIS, "Raw Ferrebris");
         addItem(NoxernaItems.RAW_OBSCUPRUM, "Raw Obscuprum");
         addItem(NoxernaItems.RAW_UMBURAM, "Raw Umburam");
         addItem(NoxernaItems.RAW_INPERLUM, "Raw Inperlum");
+        // Gems
         addItem(NoxernaItems.TENERYL, "Teneryl");
         addItem(NoxernaItems.ADAMUNA, "Adamuna");
         addItem(NoxernaItems.VITRAGOR, "Vitragor");
+        // Metals
+        addItem(NoxernaItems.FERREBRIS_NUGGET, "Ferrebris Nugget");
+        addItem(NoxernaItems.OBSCUPRUM_NUGGET, "Obscuprum Nugget");
+        addItem(NoxernaItems.UMBURAM_NUGGET, "Umburam Nugget");
+        addItem(NoxernaItems.INPERLUM_NUGGET, "Inperlum Nugget");
+        addItem(NoxernaItems.NIHOXITE_NUGGET, "Nihoxite Nugget");
         addItem(NoxernaItems.FERREBRIS_INGOT, "Ferrebris Ingot");
         addItem(NoxernaItems.OBSCUPRUM_INGOT, "Obscuprum Ingot");
         addItem(NoxernaItems.UMBURAM_INGOT, "Umburam Ingot");
         addItem(NoxernaItems.INPERLUM_INGOT, "Inperlum Ingot");
         addItem(NoxernaItems.NIHOXITE_INGOT, "Nihoxite Ingot");
+        // Misc
         addItem(NoxernaItems.NOBLEWOOD_STICK, "Noblewood Stick");
+        // Banner Patterns
+
+        // Pottery Sherds
+
+        // Smithing Templates
         addItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
         addUpgradeTemplate("nihoxite_upgrade", "Nihoxite Upgrade",
                 "Nihoxite Ingot", "Adamuna Equipment");

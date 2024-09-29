@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:storage_blocks/ferrebris"
+  },
+  "result": {
+    "count": 4,
+    "id": "noxerna:ferrebris_plating"
+  }
+}

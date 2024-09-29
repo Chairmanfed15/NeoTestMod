@@ -1,0 +1,22 @@
+{
+  "values": {
+    "noxerna:cut_obscuprum_block": {
+      "next_oxidation_stage": "noxerna:exposed_cut_obscuprum_block"
+    },
+    "noxerna:exposed_cut_obscuprum_block": {
+      "next_oxidation_stage": "noxerna:weathered_cut_obscuprum_block"
+    },
+    "noxerna:exposed_obscuprum_block": {
+      "next_oxidation_stage": "noxerna:weathered_obscuprum_block"
+    },
+    "noxerna:obscuprum_block": {
+      "next_oxidation_stage": "noxerna:exposed_obscuprum_block"
+    },
+    "noxerna:weathered_cut_obscuprum_block": {
+      "next_oxidation_stage": "noxerna:oxidized_cut_obscuprum_block"
+    },
+    "noxerna:weathered_obscuprum_block": {
+      "next_oxidation_stage": "noxerna:oxidized_obscuprum_block"
+    }
+  }
+}

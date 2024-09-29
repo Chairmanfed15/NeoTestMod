@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "ferrebris",
+  "key": {
+    "#": {
+      "item": "noxerna:ferrebris_ingot"
+    },
+    "$": {
+      "tag": "c:ingots/ferrebris"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:ferrebris_block"
+  }
+}

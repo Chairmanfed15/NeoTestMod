@@ -188,6 +188,7 @@ public class NoxernaItems {
                             NoxernaToolMaterials.NIHOXITE, 3, -2.8f))));
 
     // Block Items
+    // Xenon Wood set
     public static final Supplier<Item> XENON_LOG = registerBlockItem(
             "xenon_log", NoxernaBlocks.XENON_LOG);
     public static final Supplier<Item> XENON_WOOD = registerBlockItem(
@@ -214,8 +215,33 @@ public class NoxernaItems {
             "xenon_pressure_plate", NoxernaBlocks.XENON_PRESSURE_PLATE);
     public static final Supplier<Item> XENON_BUTTON = registerBlockItem(
             "xenon_button", NoxernaBlocks.XENON_BUTTON);
+    // Krypton Wood set
+    public static final Supplier<Item> KRYPTON_LOG = registerBlockItem(
+            "krypton_log", NoxernaBlocks.KRYPTON_LOG);
+    public static final Supplier<Item> KRYPTON_WOOD = registerBlockItem(
+            "krypton_wood", NoxernaBlocks.KRYPTON_WOOD);
+    public static final Supplier<Item> STRIPPED_KRYPTON_LOG = registerBlockItem(
+            "stripped_krypton_log", NoxernaBlocks.STRIPPED_KRYPTON_LOG);
+    public static final Supplier<Item> STRIPPED_KRYPTON_WOOD = registerBlockItem(
+            "stripped_krypton_wood", NoxernaBlocks.STRIPPED_KRYPTON_WOOD);
     public static final Supplier<Item> KRYPTON_PLANKS = registerBlockItem(
             "krypton_planks", NoxernaBlocks.KRYPTON_PLANKS);
+    public static final Supplier<Item> KRYPTON_STAIRS = registerBlockItem(
+            "krypton_stairs", NoxernaBlocks.KRYPTON_STAIRS);
+    public static final Supplier<Item> KRYPTON_SLAB = registerBlockItem(
+            "krypton_slab", NoxernaBlocks.KRYPTON_SLAB);
+    public static final Supplier<Item> KRYPTON_FENCE = registerBlockItem(
+            "krypton_fence", NoxernaBlocks.KRYPTON_FENCE);
+    public static final Supplier<Item> KRYPTON_FENCE_GATE = registerBlockItem(
+            "krypton_fence_gate", NoxernaBlocks.KRYPTON_FENCE_GATE);
+    public static final Supplier<Item> KRYPTON_DOOR = registerBlockItem(
+            "krypton_door", NoxernaBlocks.KRYPTON_DOOR);
+    public static final Supplier<Item> KRYPTON_TRAPDOOR = registerBlockItem(
+            "krypton_trapdoor", NoxernaBlocks.KRYPTON_TRAPDOOR);
+    public static final Supplier<Item> KRYPTON_PRESSURE_PLATE = registerBlockItem(
+            "krypton_pressure_plate", NoxernaBlocks.KRYPTON_PRESSURE_PLATE);
+    public static final Supplier<Item> KRYPTON_BUTTON = registerBlockItem(
+            "krypton_button", NoxernaBlocks.KRYPTON_BUTTON);
 
     public static final Supplier<Item> NOXUM = registerBlockItem(
             "noxum", NoxernaBlocks.NOXUM);
@@ -223,6 +249,66 @@ public class NoxernaItems {
             "noxum_bricks", NoxernaBlocks.NOXUM_BRICKS);
     public static final Supplier<Item> POLISHED_NOXUM = registerBlockItem(
             "polished_noxum", NoxernaBlocks.POLISHED_NOXUM);
+    public static final Supplier<Item> FERREBRIS_BLOCK = registerBlockItem(
+            "ferrebris_block", NoxernaBlocks.FERREBRIS_BLOCK);
+    public static final Supplier<Item> FERREBRIS_PLATING = registerBlockItem(
+            "ferrebris_plating", NoxernaBlocks.FERREBRIS_PLATING);
+    public static final Supplier<Item> FERREBRIS_PLATING_STAIRS = registerBlockItem(
+            "ferrebris_plating_stairs", NoxernaBlocks.FERREBRIS_PLATING_STAIRS);
+    public static final Supplier<Item> FERREBRIS_PLATING_SLAB = registerBlockItem(
+            "ferrebris_plating_slab", NoxernaBlocks.FERREBRIS_PLATING_SLAB);
+    public static final Supplier<Item> FERREBRIS_PLATING_WALL = registerBlockItem(
+            "ferrebris_plating_wall", NoxernaBlocks.FERREBRIS_PLATING_WALL);
+    public static final Supplier<Item> UMBURAM_BLOCK = registerBlockItem(
+            "umburam_block", NoxernaBlocks.UMBURAM_BLOCK);
+    public static final Supplier<Item> UMBURAM_PLATING = registerBlockItem(
+            "umburam_plating", NoxernaBlocks.UMBURAM_PLATING);
+    public static final Supplier<Item> TENERYL_BLOCK = registerBlockItem(
+            "teneryl_block", NoxernaBlocks.TENERYL_BLOCK);
+    public static final Supplier<Item> ADAMUNA_BLOCK = registerBlockItem(
+            "adamuna_block", NoxernaBlocks.ADAMUNA_BLOCK);
+    public static final Supplier<Item> INPERLUM_BLOCK = registerBlockItem(
+            "inperlum_block", NoxernaBlocks.INPERLUM_BLOCK);
+    public static final Supplier<Item> INPERLUM_PLATING = registerBlockItem(
+            "inperlum_plating", NoxernaBlocks.INPERLUM_PLATING);
+    public static final Supplier<Item> NIHOXITE_BLOCK = registerBlockItem(
+            "nihoxite_block", NoxernaBlocks.NIHOXITE_BLOCK);
+    public static final Supplier<Item> NIHOXITE_PLATING = registerBlockItem(
+            "nihoxite_plating", NoxernaBlocks.NIHOXITE_PLATING);
+    public static final Supplier<Item> VITRAGOR_BLOCK = registerBlockItem(
+            "vitragor_block", NoxernaBlocks.VITRAGOR_BLOCK);
+    public static final Supplier<Item> OBSCUPRUM_BLOCK = registerBlockItem(
+            "obscuprum_block", NoxernaBlocks.OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> EXPOSED_OBSCUPRUM_BLOCK = registerBlockItem(
+            "exposed_obscuprum_block", NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> WEATHERED_OBSCUPRUM_BLOCK = registerBlockItem(
+            "weathered_obscuprum_block", NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> OXIDIZED_OBSCUPRUM_BLOCK = registerBlockItem(
+            "oxidized_obscuprum_block", NoxernaBlocks.OXIDIZED_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> CUT_OBSCUPRUM_BLOCK = registerBlockItem(
+            "cut_obscuprum_block", NoxernaBlocks.CUT_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> EXPOSED_CUT_OBSCUPRUM_BLOCK = registerBlockItem(
+            "exposed_cut_obscuprum_block", NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> WEATHERED_CUT_OBSCUPRUM_BLOCK = registerBlockItem(
+            "weathered_cut_obscuprum_block", NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> OXIDIZED_CUT_OBSCUPRUM_BLOCK = registerBlockItem(
+            "oxidized_cut_obscuprum_block", NoxernaBlocks.OXIDIZED_CUT_OBSCUPRUM_BLOCK);
+    public static final Supplier<Item> OBSCUPRUM_BRICKS = registerBlockItem(
+            "obscuprum_bricks", NoxernaBlocks.OBSCUPRUM_BRICKS);
+    public static final Supplier<Item> EXPOSED_OBSCUPRUM_BRICKS = registerBlockItem(
+            "exposed_obscuprum_bricks", NoxernaBlocks.EXPOSED_OBSCUPRUM_BRICKS);
+    public static final Supplier<Item> WEATHERED_OBSCUPRUM_BRICKS = registerBlockItem(
+            "weathered_obscuprum_bricks", NoxernaBlocks.WEATHERED_OBSCUPRUM_BRICKS);
+    public static final Supplier<Item> OXIDIZED_OBSCUPRUM_BRICKS = registerBlockItem(
+            "oxidized_obscuprum_bricks", NoxernaBlocks.OXIDIZED_OBSCUPRUM_BRICKS);
+    public static final Supplier<Item> OBSCUPRUM_PLATING = registerBlockItem(
+            "obscuprum_plating", NoxernaBlocks.OBSCUPRUM_PLATING);
+    public static final Supplier<Item> EXPOSED_OBSCUPRUM_PLATING = registerBlockItem(
+            "exposed_obscuprum_plating", NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING);
+    public static final Supplier<Item> WEATHERED_OBSCUPRUM_PLATING = registerBlockItem(
+            "weathered_obscuprum_plating", NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING);
+    public static final Supplier<Item> OXIDIZED_OBSCUPRUM_PLATING = registerBlockItem(
+            "oxidized_obscuprum_plating", NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING);
     public static final Supplier<Item> VOIDROCK = registerBlockItem(
             "voidrock", NoxernaBlocks.VOIDROCK);
 

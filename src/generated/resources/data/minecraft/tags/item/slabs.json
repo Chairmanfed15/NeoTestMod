@@ -2,6 +2,7 @@
   "values": [
     "noxerna:noxum_slab",
     "noxerna:polished_noxum_slab",
-    "noxerna:noxum_brick_slab"
+    "noxerna:noxum_brick_slab",
+    "noxerna:ferrebris_plating_slab"
   ]
 }

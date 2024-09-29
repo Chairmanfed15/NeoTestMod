@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "noxerna:block/krypton_log_top",
+    "side": "noxerna:block/krypton_log"
+  }
+}

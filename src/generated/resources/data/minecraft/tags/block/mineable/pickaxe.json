@@ -13,6 +13,11 @@
     "noxerna:noxum_brick_stairs",
     "noxerna:noxum_brick_slab",
     "noxerna:noxum_brick_wall",
-    "noxerna:noxum_pebble"
+    "noxerna:noxum_pebble",
+    "noxerna:ferrebris_block",
+    "noxerna:ferrebris_plating",
+    "noxerna:ferrebris_plating_stairs",
+    "noxerna:ferrebris_plating_slab",
+    "noxerna:ferrebris_plating_wall"
   ]
 }

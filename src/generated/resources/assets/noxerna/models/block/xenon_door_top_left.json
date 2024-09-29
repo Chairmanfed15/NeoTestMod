@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/door_top_left",
+  "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "noxerna:block/xenon_door_bottom",
     "top": "noxerna:block/xenon_door_top"
