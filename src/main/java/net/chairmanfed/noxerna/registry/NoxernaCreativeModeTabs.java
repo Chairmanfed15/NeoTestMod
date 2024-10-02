@@ -41,6 +41,14 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaBlocks.STRIPPED_KRYPTON_LOG);
                         output.accept(NoxernaBlocks.STRIPPED_KRYPTON_WOOD);
                         output.accept(NoxernaBlocks.KRYPTON_PLANKS);
+                        output.accept(NoxernaBlocks.KRYPTON_STAIRS);
+                        output.accept(NoxernaBlocks.KRYPTON_SLAB);
+                        output.accept(NoxernaBlocks.KRYPTON_FENCE);
+                        output.accept(NoxernaBlocks.KRYPTON_FENCE_GATE);
+                        output.accept(NoxernaBlocks.KRYPTON_DOOR);
+                        output.accept(NoxernaBlocks.KRYPTON_TRAPDOOR);
+                        output.accept(NoxernaBlocks.KRYPTON_PRESSURE_PLATE);
+                        output.accept(NoxernaBlocks.KRYPTON_BUTTON);
                         // Stone Sets
                         // Noxum
                         output.accept(NoxernaBlocks.NOXUM);
@@ -118,6 +126,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaBlocks.NOXUM);
                         output.accept(NoxernaBlocks.NOXUM_PEBBLE);
                         output.accept(NoxernaBlocks.XENON_LOG);
+                        output.accept(NoxernaBlocks.KRYPTON_LOG);
                         output.accept(NoxernaBlocks.VOIDROCK);
                     })
                     .withTabsBefore(NOXERNA_BUILDING_BLOCKS.getKey()).build()
@@ -285,6 +294,7 @@ public class NoxernaCreativeModeTabs {
             event.accept(NoxernaBlocks.NOXUM.get());
             event.accept(NoxernaBlocks.NOXUM_PEBBLE.get());
             event.accept(NoxernaBlocks.XENON_LOG.get());
+            event.accept(NoxernaBlocks.KRYPTON_LOG.get());
             event.accept(NoxernaBlocks.VOIDROCK.get());
         }
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {}

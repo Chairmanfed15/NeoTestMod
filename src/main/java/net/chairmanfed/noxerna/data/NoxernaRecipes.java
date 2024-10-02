@@ -58,6 +58,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makePlanks(NoxernaTags.ItemTags.KRYPTON_LOGS, NoxernaItems.KRYPTON_PLANKS.get())
                 .group("planks")
                 .save(output, name("crafting/krypton_planks"));
+        // Noxum
         makeStairs(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_STAIRS.get().asItem())
                 .group("noxum")
                 .save(output, name("crafting/noxum_stairs"));
@@ -284,7 +285,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/noxum_bricks_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem())
                 .save(output, name("stonecutting/noxum_brick_stairs_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem(), 2)
                 .save(output, name("stonecutting/noxum_bricks_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
                 .save(output, name("stonecutting/noxum_bricks_wall_from_stonecutting"));
@@ -293,5 +294,12 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/ferrebris_plating_from_block"));
         stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING.get())
                 .save(output, name("stonecutting/ferrebris_plating"));
+        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING_STAIRS.get())
+                .save(output, name("stonecutting/ferrebris_plating_stairs"));
+        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING,
+                NoxernaItems.FERREBRIS_PLATING_SLAB.get(), 2)
+                .save(output, name("stonecutting/ferrebris_plating_slab"));
+        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING_WALL.get())
+                .save(output, name("stonecutting/ferrebris_plating_wall"));
     }
 }

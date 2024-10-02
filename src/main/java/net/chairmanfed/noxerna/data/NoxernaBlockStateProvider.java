@@ -30,7 +30,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         fenceBlockWithItem(NoxernaBlocks.XENON_FENCE, NoxernaBlocks.XENON_PLANKS);
         fenceGateWithItem(NoxernaBlocks.XENON_FENCE_GATE, NoxernaBlocks.XENON_PLANKS);
         doorBlockWithItem(NoxernaBlocks.XENON_DOOR, "cutout");
-        trapDoorWithItem(NoxernaBlocks.XENON_TRAPDOOR);
+        trapDoorWithItem(NoxernaBlocks.XENON_TRAPDOOR, "cutout");
         pressurePlateWithItem(NoxernaBlocks.XENON_PRESSURE_PLATE, NoxernaBlocks.XENON_PLANKS);
         buttonWithItem(NoxernaBlocks.XENON_BUTTON, NoxernaBlocks.XENON_PLANKS);
 
@@ -45,7 +45,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         fenceBlockWithItem(NoxernaBlocks.KRYPTON_FENCE, NoxernaBlocks.KRYPTON_PLANKS);
         fenceGateWithItem(NoxernaBlocks.KRYPTON_FENCE_GATE, NoxernaBlocks.KRYPTON_PLANKS);
         doorBlockWithItem(NoxernaBlocks.KRYPTON_DOOR, "cutout");
-        // trapDoorWithItem(NoxernaBlocks.KRYPTON_TRAPDOOR);
+        trapDoorWithItem(NoxernaBlocks.KRYPTON_TRAPDOOR, "cutout");
         pressurePlateWithItem(NoxernaBlocks.KRYPTON_PRESSURE_PLATE, NoxernaBlocks.KRYPTON_PLANKS);
         buttonWithItem(NoxernaBlocks.KRYPTON_BUTTON, NoxernaBlocks.KRYPTON_PLANKS);
 
@@ -169,6 +169,11 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
     }
     public void trapDoorWithItem(DeferredBlock<Block> block) {
         this.trapdoorBlock((TrapDoorBlock) block.get(), this.blockTexture(block.get()), true);
+        this.itemModels().trapdoorOrientableBottom(block.getId().toString(), this.blockTexture(block.get()));
+    }
+    public void trapDoorWithItem(DeferredBlock<Block> block, String renderType) {
+        this.trapdoorBlockWithRenderType((TrapDoorBlock) block.get(), this.blockTexture(block.get()),
+                true, renderType);
         this.itemModels().trapdoorOrientableBottom(block.getId().toString(), this.blockTexture(block.get()));
     }
     public void pressurePlateWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

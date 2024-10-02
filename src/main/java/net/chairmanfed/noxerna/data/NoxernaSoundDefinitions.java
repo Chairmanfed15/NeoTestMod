@@ -19,6 +19,7 @@ public class NoxernaSoundDefinitions extends SoundDefinitionsProvider {
     public void registerSounds() {
     }
 
+    // TODO: Finish sound registration
     protected static SoundDefinition.Sound sound(final String name){
         return sound(TheNoxerna.prefix(name));
     }

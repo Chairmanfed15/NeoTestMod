@@ -2,6 +2,6 @@
   "parent": "minecraft:block/template_orientable_trapdoor_open",
   "render_type": "minecraft:cutout",
   "textures": {
-    "texture": "noxerna:block/xenon_trapdoor"
+    "texture": "noxerna:block/krypton_trapdoor"
   }
 }
